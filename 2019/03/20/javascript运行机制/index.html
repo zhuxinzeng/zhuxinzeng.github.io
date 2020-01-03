@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>JavaScript执行机制 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">JavaScript执行机制</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 20, 2019&nbsp;&nbsp;14:21:35</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><img src="1.png" alt=""></p>
+<h4 id="1-关于javascript"><a href="#1-关于javascript" class="headerlink" title="1 关于javascript"></a>1 关于javascript</h4><p>javascript是一门单线程语言，在最新的HTML5中提出了Web-Worker，但javascript是单线程这一核心仍未改变。所以一切javascript版的“多线程”都是用单线程模拟出来的，一切的javascript多线程都是纸老虎！</p>
+<h4 id="2-javascript事件循环"><a href="#2-javascript事件循环" class="headerlink" title="2 javascript事件循环"></a>2 javascript事件循环</h4><p> 既然是JS是单线程，那就像只有一个窗口的银行，客户需要排队一个一个办理业务，同理js任务也是需要一个一个的顺序执行。如果一个任务耗时过长，那么后一个任务必须等着。那么问题随之而来。如果我们在浏览新闻的时候，新闻包含文字和图片，图片很大，难道我们需要一直等待图片完全显示吗？因此聪明的程序员将任务分为两类：<br> ·同步任务<br> ·异步任务<br>当我们打开网站时，网页的渲染过程就是一堆同步任务，比如说页面的骨架和页面元素的渲染。而像加载图片音乐之类占用资源耗时久的任务，就是异步任务。我们使用导图来说明：<br><img src="2.png" alt=""><br>导图表达的内容用文字来表述的话：<br>·同步和异步任务分别进入不同的执行“场所”，同步的进入主线程，异步的进入Event Table并注册函数。<br>·当指定的事情完成时，Event Table 会将这个函数移入Event Queue。<br>·主线程内的任务执行完毕为空，会去Event Queue读取对应的函数，进入主线程执行。<br>·上述过程会不断的重复，也就是常说的Event Loop（事件循环）。<br>那么有一个疑问，我们何时知道主线程执行栈为空？JS引擎存在monitoring process进程，会持续不断的检查主线程栈是否为空，一旦为空，就会去Event Queue那里检查是否有等待被调用的函数。<br>我们来看一下具体的代码：<br>let data=[];<br>$.ajax({</p>
+<p>url:<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>,<br>data:data,<br>success:()=&gt;{</p>
+<pre><code>console.log(&apos;发送成功！&apos;);</code></pre><p>}</p>
+<p>})<br>console.log(‘代码执行结束’);<br>上面的是一段简易的ajax请求代码：<br>·ajax进入Event Table ，注册回调函数success。<br>·执行console.log（‘代码执行结束’）。<br>·ajax事件完成，回调success 进入Event Queue。<br>·主线程从Event Queue读取回调函数success并执行。</p>
+<h4 id="3-又爱又恨的setTimeout"><a href="#3-又爱又恨的setTimeout" class="headerlink" title="3.又爱又恨的setTimeout"></a>3.又爱又恨的setTimeout</h4><p>大名鼎鼎的setTimeout无需再多言，大家对他的第一印象就是异步可以延时执行，我们经常这么实现延时3秒执行：<br>setTimeout(() =&gt; {<br>    console.log(‘延时3秒’);<br>},3000)</p>
+<p>渐渐的setTimeout用的地方多了，问题也出现了，有时候明明写的延时3秒，实际却5，6秒才执行函数，这又咋回事啊？<br>先看一个例子：<br>setTimeout(() =&gt; {<br>    task();<br>},3000)<br>console.log(‘执行console’);</p>
+<p>根据前面我们的结论，setTimeout是异步的，应该先执行console.log这个同步任务，所以我们的结论是：<br>//执行console<br>//task()去验证一下，结果正确！然后我们修改一下前面的代码：<br>setTimeout(() =&gt; {<br>    task()<br>},3000)</p>
+<p>sleep(10000000)</p>
+<p>乍一看其实差不多嘛，但我们把这段代码在chrome执行一下，却发现控制台执行task()需要的时间远远超过3秒，说好的延时三秒，为啥现在需要这么长时间啊？<br>这时候我们需要重新理解setTimeout的定义。我们先说上述代码是怎么执行的：</p>
+<p>·task()进入Event Table并注册,计时开始。<br>·执行sleep函数，很慢，非常慢，计时仍在继续。<br>·3秒到了，计时事件timeout完成，task()进入Event Queue，但是sleep也太慢了吧，还没执行完，只好等着。<br>·sleep终于执行完了，task()终于从Event Queue进入了主线程执行。</p>
+<p>上述的流程走完，我们知道setTimeout这个函数，是经过指定时间后，把要执行的任务(本例中为task())加入到Event Queue中，又因为是单线程任务要一个一个执行，如果前面的任务需要的时间太久，那么只能等着，导致真正的延迟时间远远大于3秒。<br>我们还经常遇到setTimeout(fn,0)这样的代码，0秒后执行又是什么意思呢？是不是可以立即执行呢？<br>答案是不会的，setTimeout(fn,0)的含义是，指定某个任务在主线程最早可得的空闲时间执行，意思就是不用再等多少秒了，只要主线程执行栈内的同步任务全部执行完成，栈为空就马上执行。举例说明：<br>//代码1<br>console.log(‘先执行这里’);<br>setTimeout(() =&gt; {<br>    console.log(‘执行啦’)<br>},0);复制代码//代码2<br>console.log(‘先执行这里’);<br>setTimeout(() =&gt; {<br>    console.log(‘执行啦’)<br>},3000);<br>代码1的输出结果是：<br>//先执行这里<br>//执行啦<br>码2的输出结果是：<br>//先执行这里<br>// … 3s later<br>// 执行了<br>关于setTimeout要补充的是，即便主线程为空，0毫秒实际上也是达不到的。根据HTML的标准，最低是4毫秒。有兴趣的同学可以自行了解。</p>
+<h4 id="4-又恨又爱的setInterval"><a href="#4-又恨又爱的setInterval" class="headerlink" title="4.又恨又爱的setInterval"></a>4.又恨又爱的setInterval</h4><p>上面说完了setTimeout，当然不能错过它的孪生兄弟setInterval。他俩差不多，只不过后者是循环的执行。对于执行顺序来说，setInterval会每隔指定的时间将注册的函数置入Event Queue，如果前面的任务耗时太久，那么同样需要等待。<br>唯一需要注意的一点是，对于setInterval(fn,ms)来说，我们已经知道不是每过ms秒会执行一次fn，而是每过ms秒，会有fn进入Event Queue。一旦setInterval的回调函数fn执行时间超过了延迟时间ms，那么就完全看不出来有时间间隔了。这句话请读者仔细品味。</p>
+<h4 id="5-Promise与process-nextTick-callback"><a href="#5-Promise与process-nextTick-callback" class="headerlink" title="5.Promise与process.nextTick(callback)"></a>5.Promise与process.nextTick(callback)</h4><p>传统的定时器我们已经研究过了，接着我们探究Promise与process.nextTick(callback)的表现。<br>Promise的定义和功能本文不再赘述，不了解的读者可以学习一下阮一峰老师的Promise。而process.nextTick(callback)类似node.js版的”setTimeout”，在事件循环的下一次循环中调用 callback 回调函数。<br>我们进入正题，除了广义的同步任务和异步任务，我们对任务有更精细的定义：</p>
+<p>macro-task(宏任务)：包括整体代码script，setTimeout，setInterval<br>micro-task(微任务)：Promise，process.nextTick</p>
+<p>不同类型的任务会进入对应的Event Queue，比如setTimeout和setInterval会进入相同的Event Queue。<br>事件循环的顺序，决定js代码的执行顺序。进入整体代码(宏任务)后，开始第一次循环。接着执行所有的微任务。然后再次从宏任务开始，找到其中一个任务队列执行完毕，再执行所有的微任务。听起来有点绕，我们用文章最开始的一段代码说明：<br>setTimeout(function() {<br>    console.log(‘setTimeout’);<br>})</p>
+<p>new Promise(function(resolve) {<br>    console.log(‘promise’);<br>}).then(function() {<br>    console.log(‘then’);<br>})</p>
+<p>console.log(‘console’);</p>
+<p>这段代码作为宏任务，进入主线程。<br>先遇到setTimeout，那么将其回调函数注册后分发到宏任务Event Queue。(注册过程与上同，下文不再描述)<br>接下来遇到了Promise，new Promise立即执行，then函数分发到微任务Event Queue。<br>遇到console.log()，立即执行。<br>好啦，整体代码script作为第一个宏任务执行结束，看看有哪些微任务？我们发现了then在微任务Event Queue里面，执行。<br>ok，第一轮事件循环结束了，我们开始第二轮循环，当然要从宏任务Event Queue开始。我们发现了宏任务Event Queue中setTimeout对应的回调函数，立即执行。<br>结束。</p>
+<p>事件循环，宏任务，微任务的关系如图所示：<br><img src="3.png" alt=""></p>
+<p>我们来分析一段较复杂的代码，看看你是否真的掌握了js的执行机制：<br>console.log(‘1’);</p>
+<p>setTimeout(function() {<br>    console.log(‘2’);<br>    process.nextTick(function() {<br>        console.log(‘3’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘4’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘5’)<br>    })<br>})<br>process.nextTick(function() {<br>    console.log(‘6’);<br>})<br>new Promise(function(resolve) {<br>    console.log(‘7’);<br>    resolve();<br>}).then(function() {<br>    console.log(‘8’)<br>})</p>
+<p>setTimeout(function() {<br>    console.log(‘9’);<br>    process.nextTick(function() {<br>        console.log(‘10’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘11’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘12’)<br>    })<br>})<br>第一轮事件循环流程分析如下：</p>
+<p>·整体script作为第一个宏任务进入主线程，遇到console.log，输出1。<br>·遇到setTimeout，其回调函数被分发到宏任务Event Queue中。我们暂且记为setTimeout1。<br>·遇到process.nextTick()，其回调函数被分发到微任务Event Queue中。我们记为process1。<br>·遇到Promise，new Promise直接执行，输出7。then被分发到微任务Event Queue中。我们记为then1。<br>·又遇到了setTimeout，其回调函数被分发到宏任务Event Queue中，我们记为setTimeout2。<br>！<a href="4.png"></a><br>·上表是第一轮事件循环宏任务结束时各Event Queue的情况，此时已经输出了1和7。</p>
+<p>·我们发现了process1和then1两个微任务。</p>
+<p>·执行process1,输出6。<br>·执行then1，输出8。</p>
+<p>好了，第一轮事件循环正式结束，这一轮的结果是输出1，7，6，8。那么第二轮时间循环从setTimeout1宏任务开始：</p>
+<p>·首先输出2。接下来遇到了process.nextTick()，同样将其分发到微任务Event Queue中，记为process2。new Promise立即执行输出4，then也分发到微任务Event Queue中，记为then2。<br>！<a href="5.png"></a></p>
+<p>·第二轮事件循环宏任务结束，我们发现有process2和then2两个微任务可以执行。<br>·输出3。<br>·输出5。<br>·第二轮事件循环结束，第二轮输出2，4，3，5。<br>·第三轮事件循环开始，此时只剩setTimeout2了，执行。<br>·直接输出9。<br>·将process.nextTick()分发到微任务Event Queue中。记为process3。<br>· Promise，输出11。<br>将then分发到微任务Event Queue中，记为then3。</p>
+<p><img src="6.png" alt=""><br>·第三轮事件循环宏任务执行结束，执行两个微任务process3和then3。<br>·输出10。<br>·输出12。<br>·第三轮事件循环结束，第三轮输出9，11，10，12。</p>
+<p>整段代码，共进行了三次事件循环，完整的输出为1，7，6，8，2，4，3，5，9，11，10，12。(请注意，node环境下的事件监听依赖libuv与前端环境不完全相同，输出顺序可能会有误差)</p>
+<h4 id="6-写在最后"><a href="#6-写在最后" class="headerlink" title="6.写在最后"></a>6.写在最后</h4><p> (1)js的异步我们从最开头就说javascript是一门单线程语言，不管是什么新框架新语法糖实现的所谓异步，其实都是用同步的方法去模拟的，牢牢把握住单线程这点非常重要。<br> (2)事件循环Event Loop事件循环是js实现异步的一种方法，也是js的执行机制。<br>(3)javascript的执行和运行执行和运行有很大的区别，javascript在不同的环境下，比如node，浏览器，Ringo等等，执行方式是不同的。而运行大多指javascript解析引擎，是统一的。<br>(4)setImmediate微任务和宏任务还有很多种类，比如setImmediate等等，执行都是有共同点的，有兴趣的同学可以自行了解。<br>(5)最后的最后<br>javascript是一门单线程语言<br>Event Loop是javascript的执行机制</p>
+<p>牢牢把握两个基本点，以认真学习javascript为中心，早日实现成为前端高手的伟大梦想！</p>
+<p>原作者：ssssyoki<br>链接：<a href="https://juejin.im/post/59e85eebf265da430d571f89" target="_blank" rel="noopener">https://juejin.im/post/59e85eebf265da430d571f89</a></p>
+<hr>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">zhuxinzeng.club/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/04/13/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/">git指令学习</a>
+            
+            
+            <a class="next" rel="next" href="/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

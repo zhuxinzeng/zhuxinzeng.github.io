@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>HTML知识总结 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">HTML知识总结</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 25, 2018&nbsp;&nbsp;0:00:00</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4 id="1-Doctype作用，HTML5-为什么只需要写"><a href="#1-Doctype作用，HTML5-为什么只需要写" class="headerlink" title="1. Doctype作用，HTML5 为什么只需要写 "></a>1. Doctype作用，HTML5 为什么只需要写 <!DOCTYPE HTML></h4><p>doctype是一种标准通用标记语言的文档类型声明，目的是告诉标准通用标记语言解析器要使用什么样的文档类型定义（DTD）来解析文档.<br>HTML5不基于SGML（Standard Generalized Markup Language），所以不需要引用DTD。</p>
+<h4 id="2-行内元素有哪些，块级元素有哪些，空-void-元素有那些？"><a href="#2-行内元素有哪些，块级元素有哪些，空-void-元素有那些？" class="headerlink" title="2. 行内元素有哪些，块级元素有哪些，空(void)元素有那些？"></a>2. 行内元素有哪些，块级元素有哪些，空(void)元素有那些？</h4><p>行内元素：a span i img input select b 等<br>块级元素：div ul ol li h1~h6 p table等<br>空元素：br hr link 等。</p>
+<h4 id="3-简述一下你对HTML语义化的理解"><a href="#3-简述一下你对HTML语义化的理解" class="headerlink" title="3. 简述一下你对HTML语义化的理解"></a>3. 简述一下你对HTML语义化的理解</h4><p>简单来说，就是合适的标签做合适的事情，这样的具有以下好处：<br>～有助于架构良好的HTML结构，有利于搜索引擎的索引，抓取，利于SEO（搜索引擎优化）<br>～有利于不同设备的解析<br>～有利于构建清晰的机构，有利于团队的开发，维护。</p>
+<h4 id="4-常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解"><a href="#4-常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解" class="headerlink" title="4. 常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解"></a>4. 常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解</h4><p>Trident内核：IE<br>Gecko内核： NETSCAPE6及以上版本，火狐<br>Presto内核：Opera7及以上。[Opera内核原为：Presto，现为：Blink;]Webkit内核：Safari，Chrome等。[Chrome的：Blink（WebKit的分支）]<br>浏览器内核又可以分成两部分：渲染引擎和JS引擎。 渲染引擎主要负责取得网页的内容、整理讯息、计算网页的显示方式等，JS引擎则是解析Javascript语言，执行javascript语言来实现网页的动态效果。</p>
+<h4 id="5-html5有哪些新特性"><a href="#5-html5有哪些新特性" class="headerlink" title="5. html5有哪些新特性"></a>5. html5有哪些新特性</h4><p>  • 语义化标签: header footer nav section article aside 等<br>  • 增强型表单：date(从一个日期选择器选择一个日期) email(包含 e-mail 地址的输入域) number(数值的输入域) range(一定范围内数字值的输入域) search(用于搜索域) tel(定义输入电话号码字段) 等<br>  • 视频和音频：audio video<br>  • Canvas绘图 SVG绘图<br>  • 地理定位：Geolocation<br>  • 拖放API：drag<br>  • web worker：是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能<br>  • web storage: localStorage sessionStorage<br>  • WebSocket: HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议</p>
+<h4 id="6-描述一下-cookie，sessionStorage-和-localStorage-的区别"><a href="#6-描述一下-cookie，sessionStorage-和-localStorage-的区别" class="headerlink" title="6. 描述一下 cookie，sessionStorage 和 localStorage 的区别"></a>6. 描述一下 cookie，sessionStorage 和 localStorage 的区别</h4><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g1irbs4f4oj30vk0dydk3.jpg" alt=""></p>
+<h4 id="7-如何实现浏览器内多个标签页之间的通信"><a href="#7-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="7. 如何实现浏览器内多个标签页之间的通信"></a>7. 如何实现浏览器内多个标签页之间的通信</h4><p>  • 使用localStorage: localStorage.setItem(key,value)、localStorage.getItem(key)<br>  • websocket协议<br>  • webworker(为javascript创造多线程环境)</p>
+<h4 id="8-HTML5的离线存储怎么使用，解释一下工作原理"><a href="#8-HTML5的离线存储怎么使用，解释一下工作原理" class="headerlink" title="8. HTML5的离线存储怎么使用，解释一下工作原理"></a>8. HTML5的离线存储怎么使用，解释一下工作原理</h4><p>使用HTML5，通过创建cache manifest文件，可以轻松创建WEB应用的离线版本。HTML5引入了应用程序缓存，这意味着应用可进行缓存，并可在没有网络进行访问。应用程序缓存为应用带来三个优势：<br>  • 离线浏览–用户可在离线时使用它们。 <br>  • 速度–已经缓存的资源加载得更快。 <br>  • 减少服务器负载–浏览器将只从服务器下载更改过的资源。 <br>HTML5的离线存储是基于一个新建的manifest（即.appcache）文件的。<br>manifest 文件可分为三个部分：<br>  • CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存 <br>  • NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存 <br>  • FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面） 在线的情况下,用户代理每次访问页面，都会去读一次manifest.如果发现其改变, 则重新加载全部清单中的资源。 </p>
+<h4 id="9-src与href的区别"><a href="#9-src与href的区别" class="headerlink" title="9. src与href的区别"></a>9. src与href的区别</h4><p>区别：src用于替代这个元素，而href用于建立这个标签与外部资源之间的关系</p>
+<link href="style.css" rel="stylesheet" />浏览器加载到这里的时候，html的渲染和解析不会暂停，css文件的加载是同时进行的
+<script src="script.js"></script>当浏览器解析到这句代码时，页面的加载和解析都会暂停直到浏览器拿到并执行完这个js文件
+请求资源类型不同
+（1） href是Hypertext Reference的缩写，表示超文本引用。用来建立当前元素和文档之间的链接。常用的有：link、a。
+（2）在请求 src 资源时会将其指向的资源下载并应用到文档中，常用的有script，img 、iframe；
+作用结果不同
+（1）href 用于在当前文档和引用资源之间确立联系；
+（2）src 用于替换当前内容；
+浏览器解析方式不同
+（1）若在文档中添加href ，浏览器会识别该文档为 CSS 文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式加载 CSS，而不是使用 @import 方式。
+（2）当浏览器解析到src ，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等也如此，类似于将所指向资源应用到当前内容。这也是为什么建议把 js 脚本放在底部而不是头部的原因。
+link和@import的区别
+两者都是外部引用 CSS 的方式，但是存在一定的区别：
+（1）link是XHTML标签，除了能够加载CSS，还可以定义RSS等其他事务；而@import属于CSS范畴，只可以加载CSS。
+（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。
+（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。
+（4）link支持使用Javascript控制DOM改变样式；而@import不支持。
+
+<h4 id="10-表单提交中Get和Post方式的区别"><a href="#10-表单提交中Get和Post方式的区别" class="headerlink" title="10. 表单提交中Get和Post方式的区别"></a>10. 表单提交中Get和Post方式的区别</h4><p>  • Get一般用于从服务器上获取数据，Post向服务器传送数据<br>  • Get传输的数据是拼接在Url之后的，对用户是可见的；Post的传输数据对用户是不可见的<br>  • Get传送的数据量较小，不能大于2KB。Post传送的数据量较大，一般被默认为不受限制<br>  • Get安全性非常低，Post安全性较高<br>  • 在FORM提交的时候，如果不指定Method，则默认为Get请求</p>
+<hr>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">zhuxinzeng.club/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+            
+            
+            <a class="next" rel="next" href="/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">CSS知识总结</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

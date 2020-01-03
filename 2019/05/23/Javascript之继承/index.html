@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>Javascript之继承 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Javascript之继承</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 23, 2019&nbsp;&nbsp;15:13:39</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><blockquote>
+<p>继承是OO语言中一个重要的概念。许多的语言都支持两种继承方式：接口继承和实现继承。接口继承只继承方法签名，而实现继承则只继承实际的方法。由于函数没有签名，在ECMA Script中无法实现接口继承，只支持实现继承，而实现继承主要是依靠原型链来实现。</p>
+</blockquote>
+<h4 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">   this.property&#x3D;true;</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype&#x3D;&#123;</span><br><span class="line">	getSup:function()&#123;</span><br><span class="line">		renturn  this.property;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Sub()&#123;</span><br><span class="line">	this.subproperty&#x3D;flase;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;继承Sup</span><br><span class="line">Sub.protype&#x3D;new sup();</span><br><span class="line"></span><br><span class="line">var instance&#x3D;new Sub();</span><br><span class="line">alert(instance.getSup());  &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+
+<p><em>确定原型和实例等关系</em></p>
+<blockquote>
+<p>可以通过两种方式确定原型和实例之间的关系。第一种是使用instanceof操作符，第二种是使用isPrototypeOf()方法。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(instance instanceof Object);&#x2F;&#x2F;true</span><br><span class="line"></span><br><span class="line">alert(Object.prototype.isPrototypeOf(instance));  &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+<p><em>注意:</em></p>
+<blockquote>
+<ol>
+<li>给原型添加方法的代码一定要放在替换原型的语句之后</li>
+<li>通过原型链实现继承时，不能使用字面量创建原型方法，因为这样会重写原型链。</li>
+</ol>
+</blockquote>
+<p><em>原型链存在的问题</em></p>
+<blockquote>
+<ol>
+<li>包含引用类型值的原型属性会被所有的实例共享</li>
+<li>在创建子类型的实例时，不能向超类型的构造函数中传递参数</li>
+</ol>
+</blockquote>
+<h4 id="借用构造函数"><a href="#借用构造函数" class="headerlink" title="借用构造函数"></a>借用构造函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function Sup(colcors)&#123;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Sub()&#123;</span><br><span class="line">	&#x2F;&#x2F;继承了Sup</span><br><span class="line">	Sup.call(this); &#x2F;&#x2F;借调超类型的构造函数</span><br><span class="line">&#125;</span><br><span class="line">var instance1&#x3D;new Sub();</span><br><span class="line">instance1.colors.push(&#39;black&#39;);</span><br><span class="line">alert(instance1.colors);  &#x2F;&#x2F;red blue green balck</span><br><span class="line"></span><br><span class="line">var instance2&#x3D;new Sub();</span><br><span class="line">alert(instance2.colors);  &#x2F;&#x2F;red blue grenn</span><br></pre></td></tr></table></figure>
+<p>相对于原型链而言，借用构造函数又一个比较大的优势，可以在子构造函数中向超类型构造函数传递参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Sup(colcors)&#123;</span><br><span class="line">	this.colors&#x3D;colors;</span><br><span class="line">&#125;</span><br><span class="line">function Sub()&#123;</span><br><span class="line">	&#x2F;&#x2F;继承了Sup，同时传参</span><br><span class="line">	Sup.call(this,yellow); </span><br><span class="line">	this.number&#x3D;12;</span><br><span class="line">&#125;</span><br><span class="line">var instance &#x3D;new Sub();</span><br><span class="line">alert(instance.colors); &#x2F;&#x2F;yellow</span><br><span class="line">alret(instance.number); &#x2F;&#x2F;12</span><br></pre></td></tr></table></figure>
+<p><em>借用构造函数存在的问题：</em></p>
+<blockquote>
+<p>方法都在构造函数中定义，函数的复用无从谈起。而且在超类型的原型中定义的方法，对子类型而言也是不可见的。</p>
+</blockquote>
+<h4 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h4><blockquote>
+<p>也称为伪经典继承，将原型链和借用构造函数的技术组合在一起。<em>其背后的思路是使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">	this.name&#x3D;name;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype.sayName&#x3D;function()&#123;</span><br><span class="line">	alert(this.name);</span><br><span class="line">&#125;;</span><br><span class="line">function Sub(name.age)&#123;</span><br><span class="line">	Sup.call(this,name);</span><br><span class="line">	this.age&#x3D;age;</span><br><span class="line">&#125;</span><br><span class="line">Sub.prototype&#x3D;new Sup();</span><br><span class="line">&#x2F;&#x2F;定义新的方法要在继承之后</span><br><span class="line">Sub.prototype.sayAge&#x3D;function()&#123;</span><br><span class="line">	alert(this.age);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var instance1&#x3D;new Sub(&quot;jack&quot;,21);</span><br><span class="line">instance1.colors.push(&#39;black&#39;);</span><br><span class="line">alert(instance.colors);&#x2F;&#x2F;red blue green black</span><br><span class="line">instance1.sayName();&#x2F;&#x2F;jack</span><br><span class="line">instance1.sayAge();&#x2F;&#x2F;21</span><br><span class="line"></span><br><span class="line">var instance2&#x3D;new sub(&quot;mark&quot;,24);</span><br><span class="line">alert(instance.colors);&#x2F;&#x2F;red blue green </span><br><span class="line">instance1.sayName();&#x2F;&#x2F;mark</span><br><span class="line">instance1.sayAge();&#x2F;&#x2F;27</span><br></pre></td></tr></table></figure>
+<p><em>缺点:</em></p>
+<blockquote>
+<p>无论什么情况下，都会调用两次超类型构造函数，一次是在创建子类型原型的时候，另一次是在子类型构造函数的内部。</p>
+</blockquote>
+<h4 id="原型式继承"><a href="#原型式继承" class="headerlink" title="原型式继承"></a>原型式继承</h4><p>Object函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function object(o)&#123;</span><br><span class="line">	function F()&#123;&#125;</span><br><span class="line">	F.prototype&#x3D;o;</span><br><span class="line">	return new F();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var person&#x3D;&#123;</span><br><span class="line">  name:&#39;lisi&#39;,</span><br><span class="line">  friends:[&#39;mark&#39;,&#39;van&#39;]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var anotherPerson&#x3D;object.create(person);</span><br><span class="line">anotherPerson.name&#x3D;&#39;grey&#39;;</span><br><span class="line">anotherPerson.friends.push(&#39;rob&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var yetPerson&#x3D;object.create(person);</span><br><span class="line">yetPerson.name&#x3D;&#39;linda&#39;;</span><br><span class="line">yetPerson.friends.push(&#39;barbie&#39;);</span><br><span class="line"></span><br><span class="line">alert(person.friends);&#x2F;&#x2F; mark van rob barbie</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ECMAScript5通过新增Object.create（）方法规范化了原型式继承。这个方法接收两个参数：一个用作新对象和（可选的）一个新对象定义额外属性的对象。在传入一个参数的情况下，object.create()与object()方法的行为相同。<br><em>例如:</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var person&#x3D;&#123;</span><br><span class="line">	name:&#39;Jack&#39;,</span><br><span class="line">	friends:[&#39;Shelby&#39;,&#39;Court&#39;,&#39;Van&#39;]</span><br><span class="line">&#125;;</span><br><span class="line">var anotherPerson&#x3D;object.create(pperson,&#123;</span><br><span class="line">	name:&#123;</span><br><span class="line">		value:&#39;Greg&#39;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function createAnother(original)&#123;</span><br><span class="line">	var clone &#x3D;object(original); &#x2F;&#x2F;通过调用函数创建一个新的对象</span><br><span class="line">	clone.sayHi&#x3D;function()&#123;</span><br><span class="line">		alert(&#39;hi&#39;);</span><br><span class="line">	&#125;;  &#x2F;&#x2F;以某种方式来增强这个对象</span><br><span class="line">	return clone; &#x2F;&#x2F;返回这个对象</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person&#x3D;&#123;</span><br><span class="line">	name:&quot;Nicholas&quot;,</span><br><span class="line">	friends:[&quot;Shelby&quot;,&quot;Court&quot;,&quot;Van&quot;]</span><br><span class="line">&#125;;</span><br><span class="line">var anotherPerson&#x3D;createAnother(person);</span><br><span class="line">anotherPerson.sayHi();&#x2F;&#x2F;&quot;hi&quot;</span><br></pre></td></tr></table></figure>
+<p><em>优点:</em><br>新对象不仅具有person的所有的属性和方法，而且还有自己的sayHi()方法。</p>
+<p><em>缺点:</em><br>使用寄生式继承来为对象添加函数，会犹豫不能做到哈叔复用而降低效率，这一点域构造函数模式类似。</p>
+<h4 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h4><blockquote>
+<p>通过借用构造函数来继承属性，通过原型链的混成形式来继承方法。其背后的基本思路是：不必为了指定子类型的原型而调用超类型的构造函数，我们所需的无非就是超类型原型的一个副本而已。本质上使用寄生式继承来继承超类型的原型，然后将结果指定给子类型的原型。<br><em>寄生组合继承的基本模式如下所示:</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function inheritPrototype(sub,sup)&#123;</span><br><span class="line">	var prototype&#x3D;object(sup.prototype); &#x2F;&#x2F;创建对象</span><br><span class="line">	prototype.constructor&#x3D;sub; &#x2F;&#x2F;增强对象</span><br><span class="line">	sub.prototype&#x3D;prototype;  &#x2F;&#x2F;指定对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>相当于封装了一个inheriPrototype函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">	this.name&#x3D;name;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype.sayName&#x3D;function()&#123;</span><br><span class="line">	alert(this.name);</span><br><span class="line">&#125;;</span><br><span class="line">function Sub(name.age)&#123;</span><br><span class="line">	Sup.call(this,name);</span><br><span class="line">	this.age&#x3D;age;</span><br><span class="line">&#125;</span><br><span class="line">inheritPrototype(SubType,SuperType);</span><br><span class="line">&#x2F;&#x2F;定义新的方法要在继承之后</span><br><span class="line">Sub.prototype.sayAge&#x3D;function()&#123;</span><br><span class="line">	alert(this.age);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>如图所示：<br><img src="http://ww2.sinaimg.cn/large/006tNc79ly1g3duwygdd2j30w40tg79y.jpg" alt=""></p>
+<blockquote>
+<p>这个例子的高效性体现于它只调用一次SuperType构造函数，并且因此避免了在subtype.prototype 上面创建不必要的，多余的属性。与此同时原型链还能够保持不变，因此还能够正常使用instanceof和isPrototyepOf()。开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。</p>
+</blockquote>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2019/05/23/Javascript%E4%B9%8B%E7%BB%A7%E6%89%BF/">zhuxinzeng.club/2019/05/23/Javascript%E4%B9%8B%E7%BB%A7%E6%89%BF/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Javascript/"># Javascript</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/05/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90%E7%9A%84%E6%96%B9%E5%BC%8F/">浏览器跨域获取资源的方式</a>
+            
+            
+            <a class="next" rel="next" href="/2019/04/13/%E5%8A%A1%E8%99%9A%E7%9A%84%E5%8D%81%E5%B9%B4/">务虚的十年</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

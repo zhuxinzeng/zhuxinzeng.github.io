@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>正则表达式 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">正则表达式</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 20, 2019&nbsp;&nbsp;10:39:54</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>正则表达式，一个十分古老而又强大的文本处理工具，仅仅用一段非常简短的表达式语句，便能够快速实现一个非常复杂的业务逻辑。熟练地掌握正则表达式的话，能够使你的开发效率得到极大的提升。</p>
+<h2 id="正则表达式-js-java-c-python"><a href="#正则表达式-js-java-c-python" class="headerlink" title="正则表达式 js java c# python"></a>正则表达式 js java c# python</h2><h3 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h3><p><code>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp</code></p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>正则表达式是为了解决字符串操作中一些比较麻烦的场景，比如字符串提取、字符串替换、字符串验证等<ul>
+<li>常用于：表单验证：是否是一个数字、是一个电话号码、是一个邮箱。。。</li>
+<li>字符串替换：</li>
+<li>字符串查找</li>
+</ul>
+</li>
+</ul>
+<h4 id="正则表达式其实也是js里面的一个对象"><a href="#正则表达式其实也是js里面的一个对象" class="headerlink" title="正则表达式其实也是js里面的一个对象"></a>正则表达式其实也是js里面的一个对象</h4><h4 id="创建一个正则表达式"><a href="#创建一个正则表达式" class="headerlink" title="创建一个正则表达式"></a>创建一个正则表达式</h4><ul>
+<li><code>var reg2=new RegExp(&quot;a&quot;);</code></li>
+<li><code>var reg1=/a/;</code>   <ul>
+<li>其中//是标记，a表示要匹配的字符</li>
+</ul>
+</li>
+</ul>
+<h4 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/a/</span>;        <span class="comment">//匹配字符串中的a字符</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);        </span><br><span class="line"><span class="comment">//正则表达式的test用来检测字符串是否满足正则表达式的要求；</span></span><br><span class="line"><span class="comment">//由于"abc"中存在a，所以是符合要求的，所以这段代码的返回值为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isTrue = reg.test(<span class="string">"coke"</span>);   <span class="comment">//由于"coke"中不存在a字符，所以不符合条件   --&gt;isTrue:false</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/abc/</span>;     </span><br><span class="line">reg2.test(<span class="string">"adbcd"</span>); <span class="comment">//字符串中必然存在"abc"才符合要求，所以这段代码的返回值为false</span></span><br><span class="line"></span><br><span class="line">reg2.test(<span class="string">"1abc"</span>);  <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"abc123"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"abcabc"</span>);    <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="正则表达式特殊字符"><a href="#正则表达式特殊字符" class="headerlink" title="正则表达式特殊字符"></a>正则表达式特殊字符</h3><h4 id="字符类别"><a href="#字符类别" class="headerlink" title="字符类别"></a>字符类别</h4><ul>
+<li><p>. 表示除了换行符(\r \n)以外的任意字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/./</span>;</span><br><span class="line">reg.test(<span class="string">"a"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"."</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"\r"</span>); <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"1\r"</span>);    <span class="comment">//存在一个1，不是换行符，所以结果为：true</span></span><br><span class="line">reg.test(<span class="string">"\r\n"</span>);   <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注意点：如果以后要匹配.字符，不要直接写.</span></span><br><span class="line"><span class="comment">//为了匹配qq邮箱，写了 /qq.com/ 这是一个错误的写法：</span></span><br><span class="line"><span class="comment">//=&gt;/qq.com/不仅匹配："qq.com"也匹配"qq3com" "qq@com"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//解决方案：/qq\.com/  或者 /qq[.]com/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\d 表示数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d/</span>;</span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//由于存在一个数字，所以结果为true</span></span><br><span class="line">reg.test(<span class="string">"abcde"</span>);  <span class="comment">//由于不存在任何数字，所以结果为false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//扩展：</span></span><br><span class="line"><span class="keyword">var</span> _reg=<span class="regexp">/\d\d/</span>;</span><br><span class="line">_reg.test(<span class="string">"1b"</span>);    <span class="comment">//不存在2个连续数字，所以结果为：false</span></span><br><span class="line">_reg.test(<span class="string">"a12c"</span>);  <span class="comment">//存在2个连续数字，结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配手机号码：出现了连续11个数字</span></span><br><span class="line"><span class="keyword">var</span> isCellphoneNumber=<span class="regexp">/\d\d\d\d\d\d\d\d\d\d\d/</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例：匹配手机号码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d\d\d\d\d\d\d\d\d\d\d/</span>;</span><br><span class="line">reg.test(<span class="string">"13532159091"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"17380889395"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"a7380889395"</span>);        <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\D 是\d的取反结果，表示不是数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\D/</span>;</span><br><span class="line">_reg.test(<span class="string">"123"</span>);   <span class="comment">//由于全是数字，所以结果为：false</span></span><br><span class="line">_reg.test(<span class="string">"123a"</span>);  <span class="comment">//存在一个字母，所以结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/123\D5/</span>;</span><br><span class="line">_reg.test(<span class="string">"12345"</span>); <span class="comment">//false</span></span><br><span class="line">_reg.test(<span class="string">"123b5"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\w 匹配字母、数字、下划线 ，三者满足其一即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\w/</span>;   </span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//存在数字，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"a"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"_"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"-"</span>);  <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"."</span>);  <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">reg.test(<span class="string">"1."</span>);   <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"_\r\n"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"\r\n"</span>);   <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\W 是\w的取反</p>
+</li>
+<li><p>\s 表示一个空白字符（例如：\r \n \t 空格 。。。）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\s/</span>;</span><br><span class="line">reg.test(<span class="string">"abc def"</span>);   <span class="comment">//存在一个空白，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc\r123"</span>);   <span class="comment">//存在一个\r，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);    <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\S 是\s的取反</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\S/</span>;</span><br><span class="line">reg.test(<span class="string">" \r \n "</span>);   <span class="comment">//全是空白字符，结果为false</span></span><br><span class="line">reg.test(<span class="string">"123 abc"</span>);    <span class="comment">//存在一个空白，结果为true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/\s\S/</span>;</span><br><span class="line">reg3.test(<span class="string">" a"</span>);    <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a "</span>);    <span class="comment">//false</span></span><br><span class="line">reg3.test(<span class="string">"a b"</span>);   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\ 转义字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/./</span>;    <span class="comment">//匹配除了换行符以外的任意字符</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\./</span>;   <span class="comment">//匹配.字符</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\//</span>;   <span class="comment">//匹配一个正斜杠：/</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[/]/</span>;  <span class="comment">//。。。。。。。。。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例：匹配邮箱</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//asfas.com</span></span><br><span class="line"><span class="comment">//123ad.com</span></span><br><span class="line"><span class="comment">//ABC12.com</span></span><br><span class="line"><span class="comment">//abc_1.com</span></span><br><span class="line"><span class="keyword">var</span> reg =<span class="regexp">/\w\w\w\w\w\.com/</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h4 id="字符集合"><a href="#字符集合" class="headerlink" title="字符集合"></a>字符集合</h4><ul>
+<li>[]<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[1a2b3]/</span>; <span class="comment">//匹配一个字符，这个字符必须是：1/a/2/b/3其中一种，如果是就表示满足，如果不是就不满足</span></span><br><span class="line">reg.test(<span class="string">"a"</span>);      <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"3"</span>);      <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"fg5678"</span>); <span class="comment">//一个符合要求的字符都不存在，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"a999999"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//升级版</span></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/[123][abc]/</span>;  <span class="comment">//为了匹配连续2个字符，第一个字符必须在1/2/3之内，第二个字符必须在a/b/c之内</span></span><br><span class="line">reg2.test(<span class="string">"2a"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"3c"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"1basdfasf"</span>); <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"asdfasdf1c"</span>);    <span class="comment">//存在符合条件的1c，结果为：true</span></span><br><span class="line">reg2.test(<span class="string">"39"</span>);    <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/[0-9]/</span>;   <span class="comment">//匹配数字0-9之间，任何一个数字 等价于：/\d/</span></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/[a-z]/</span>;   <span class="comment">//匹配小写字母</span></span><br><span class="line"><span class="keyword">var</span> reg4=<span class="regexp">/[A-Z]/</span>;   <span class="comment">//匹配大写字母</span></span><br><span class="line"><span class="keyword">var</span> reg5=<span class="regexp">/[a-zA-Z]/</span>;<span class="comment">//匹配所有字母</span></span><br><span class="line"><span class="keyword">var</span> reg6=<span class="regexp">/[A-Za-z]/</span>;<span class="comment">//..........</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg10=<span class="regexp">/[0-9abc]/</span>;</span><br><span class="line">reg10.test(<span class="string">"3"</span>);<span class="comment">//true</span></span><br><span class="line">reg10.test(<span class="string">"five"</span>);<span class="comment">//false</span></span><br><span class="line">reg10.test(<span class="string">"banana"</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li>[^]<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[^123]/</span>;   <span class="comment">//匹配一个字符，但是这个字符既不是1 并且 不是2 并且 不是3 </span></span><br><span class="line">reg.test(<span class="string">"a"</span>);      <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"3"</span>);      <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//没有1，2，3以外的字符，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"a123"</span>);   <span class="comment">//存在一个符合条件的a，所以结果为：true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h4><ul>
+<li>^ 表示字符串最左边</li>
+<li>$ 表示字符串最右边<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/^abc/</span>;     <span class="comment">//表示以abc开头</span></span><br><span class="line">reg.test(<span class="string">"123abc123"</span>);  <span class="comment">//并不是以abc开头，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"abc123"</span>);     <span class="comment">//以abc开头，结果为：true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc$/</span>;     <span class="comment">//表示以abc结尾</span></span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc123"</span>); <span class="comment">//结果为：false</span></span><br><span class="line">reg.test(<span class="string">"123bc"</span>);  <span class="comment">//结果为：false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配一个手机号码 (11位)--&gt;(1)+(10位数字)</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d\d\d\d\d\d\d\d\d\d/</span>;</span><br><span class="line">reg.test(<span class="string">"13166668888a"</span>);   <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/^1\d\d\d\d\d\d\d\d\d\d$/</span>;</span><br><span class="line">reg2.test(<span class="string">"13166668888a"</span>);   <span class="comment">//false</span></span><br><span class="line">reg2.test(<span class="string">"13166668888"</span>);    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/^1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/^abc$/</span>;    <span class="comment">//表示字符串abc</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//结果为：false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><ul>
+<li><code>*</code> 出现0次或多次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d*/</span>;</span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"234"</span>);    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/1\d*/</span>;</span><br><span class="line">reg3.test(<span class="string">"1"</span>); <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"123"</span>);   <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a123"</span>)   <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a123456b"</span>);   <span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
+<li><code>+</code> 出现1次或多次(至少一次)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d+/</span>;</span><br><span class="line">reg.test(<span class="string">"1"</span>);      <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>?</code> 出现0次或一次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d?/</span>; </span><br><span class="line">reg.test(<span class="string">"12"</span>);     <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1"</span>);      <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3}</code> 出现3次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\w&#123;5&#125;/</span>;</span><br><span class="line">reg.test(<span class="string">"1abc"</span>);   <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"112345"</span>); <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1abc12"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3,}</code> 至少出现3次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d&#123;2,&#125;/</span>;</span><br><span class="line">reg.test(<span class="string">"12"</span>); <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"5"</span>);  <span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3,5}</code> 出现3-5次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc&#123;3&#125;/</span>;           <span class="comment">//表示匹配abccc</span></span><br><span class="line">reg.test(<span class="string">"123abccc123"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/(abc)&#123;2&#125;/</span>;    <span class="comment">//匹配abcabc</span></span><br></pre></td></tr></table></figure></li>
+<li><code>|</code> 或者<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc|123/</span>;  <span class="comment">//表示匹配abc或者123</span></span><br><span class="line"></span><br><span class="line">reg.test(<span class="string">"abc456"</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg5=<span class="regexp">/^abc|123$/</span>;  <span class="comment">//匹配以abc开头，或者以123结尾</span></span><br><span class="line">reg5.test(<span class="string">"abcafsadfasd"</span>);<span class="comment">//true</span></span><br><span class="line">reg5.test(<span class="string">"afsdfasdf123"</span>);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg6=<span class="regexp">/^(abc|123)$/</span>;        <span class="comment">//匹配abc/123</span></span><br></pre></td></tr></table></figure></li>
+<li><code>()</code> 分组<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//010-88889999</span></span><br><span class="line"><span class="comment">//0576-12312312</span></span><br><span class="line"><span class="comment">//0895-1234567</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>;  <span class="comment">//匹配电话号码</span></span><br><span class="line"><span class="keyword">var</span> arr=<span class="string">"021-33335555"</span>.match(<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>)</span><br><span class="line">arr[<span class="number">0</span>]  <span class="comment">//全部</span></span><br><span class="line">arr[<span class="number">1</span>]  <span class="comment">//第一组：区号：021</span></span><br><span class="line">arr[<span class="number">2</span>]  <span class="comment">//第二组：号码：333355555</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>;</span><br><span class="line"><span class="string">"021-33335555"</span>.replace(<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>,<span class="string">'区号是：$1'</span>)</span><br><span class="line"><span class="comment">//区号是：021</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"[object Array]"</span>;</span><br><span class="line"><span class="keyword">var</span> str2=<span class="string">"[object Object]"</span>;</span><br><span class="line"><span class="keyword">var</span> str3=<span class="string">'[object Function]'</span>;</span><br><span class="line"><span class="keyword">var</span> str4=<span class="string">'[object Date]'</span>;</span><br><span class="line"></span><br><span class="line">str.replace(<span class="string">"[object "</span>,<span class="string">""</span>).replace(<span class="string">"]"</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line">str.replace(<span class="regexp">/\[object /</span>,<span class="string">""</span>).replace(<span class="regexp">/\]/</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="comment">//这样的话正则表达式只匹配一次，也就是说后面的]换不掉</span></span><br><span class="line">str.replace(<span class="regexp">/\[object |\]/</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"><span class="comment">//如何解决？进行全局匹配</span></span><br><span class="line">str.replace(<span class="regexp">/\[object |\]/g</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line">str.replace(<span class="regexp">/[^\s]+\s/</span>,<span class="string">""</span>).replace(<span class="regexp">/\]/</span>,<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>正则表达式经常被用于字段或任意字符串的校验，如下面这段校验基本日期格式的JavaScript代码：</p>
+<p><code>var reg = /^(\\d{1,4})(-|\\/)(\\d{1,2})\\2(\\d{1,2})$/; 
+var r = fieldValue.match(reg);             
+if(r==null)alert(&#39;Date format error!&#39;);</code></p>
+<h5 id="1-校验密码强度"><a href="#1-校验密码强度" class="headerlink" title="1 . 校验密码强度"></a>1 . 校验密码强度</h5><p>密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</p>
+<p><code>／^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$／</code></p>
+<h5 id="2-校验中文"><a href="#2-校验中文" class="headerlink" title="2. 校验中文"></a>2. 校验中文</h5><p><code>／^[\\u4e00-\\u9fa5]{0,}$／</code></p>
+<h5 id="3-由数字、26个英文字母或下划线组成的字符串"><a href="#3-由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="3. 由数字、26个英文字母或下划线组成的字符串"></a>3. 由数字、26个英文字母或下划线组成的字符串</h5><p><code>/^\\w+$/</code></p>
+<h5 id="4-校验E-Mail-地址"><a href="#4-校验E-Mail-地址" class="headerlink" title="4. 校验E-Mail 地址"></a>4. 校验E-Mail 地址</h5><p>同密码一样，下面是E-mail地址合规性的正则检查语句。<br><code>/[\\w!#$%&amp;&#39;*+/=?^_</code>{|}<del>-]+(?:\.[\w!#$%&amp;’*+/=?^_`{|}</del>-]+)<em>@(?:[\w](?:[\w-]</em>[\w])?\.)+<a href="?:[\w-]*[\w]">\w</a>?/`</p>
+<h5 id="5-校验身份证号码"><a href="#5-校验身份证号码" class="headerlink" title="5. 校验身份证号码"></a>5. 校验身份证号码</h5><p>下面是身份证号码的正则校验。15 或 18位。<br>15位：<br><code>/^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$/</code><br>18位：<br><code>/^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$/</code></p>
+<h5 id="6-校验日期"><a href="#6-校验日期" class="headerlink" title="6. 校验日期"></a>6. 校验日期</h5><p><code>/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/</code></p>
+<h5 id="7-校验金额"><a href="#7-校验金额" class="headerlink" title="7. 校验金额"></a>7. 校验金额</h5><p>金额校验，精确到2位小数。<br><code>^[0-9]+(.[0-9]{2})?$</code></p>
+<h5 id="8-校验手机号"><a href="#8-校验手机号" class="headerlink" title="8. 校验手机号"></a>8. 校验手机号</h5><p>下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）<br><code>/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$/</code></p>
+<h5 id="9-判断IE的版本"><a href="#9-判断IE的版本" class="headerlink" title="9. 判断IE的版本"></a>9. 判断IE的版本</h5><p>IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。<br><code>/^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$/</code></p>
+<h5 id="10-校验IP-v4地址"><a href="#10-校验IP-v4地址" class="headerlink" title="10. 校验IP-v4地址"></a>10. 校验IP-v4地址</h5><p>IP4 正则语句。<br><code>/\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b/</code></p>
+<h5 id="11-校验IP-v6地址"><a href="#11-校验IP-v6地址" class="headerlink" title="11. 校验IP-v6地址"></a>11. 校验IP-v6地址</h5><p>IP6 正则语句。<br><code>/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/</code></p>
+<h5 id="12-检查URL的前缀"><a href="#12-检查URL的前缀" class="headerlink" title="12. 检查URL的前缀"></a>12. 检查URL的前缀</h5><p>应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。<br><code>/if (!s.match(/^[a-zA-Z]+:\\/\\//))
+{
+    s = &#39;http://&#39; + s;
+}/</code></p>
+<h5 id="13-提取URL链接"><a href="#13-提取URL链接" class="headerlink" title="13. 提取URL链接"></a>13. 提取URL链接</h5><p>下面的这个表达式可以筛选出一段文本中的URL。<br><code>/^(f|ht){1}(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?/</code></p>
+<h5 id="14-文件路径及扩展名校验"><a href="#14-文件路径及扩展名校验" class="headerlink" title="14. 文件路径及扩展名校验"></a>14. 文件路径及扩展名校验</h5><p>验证windows下文件路径和扩展名（下面的例子中为.txt文件）<br><code>/^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?&quot;&lt;&gt;|]+\\.txt(l)?$/</code></p>
+<h5 id="15-提取Color-Hex-Codes"><a href="#15-提取Color-Hex-Codes" class="headerlink" title="15. 提取Color Hex  Codes"></a>15. 提取Color Hex  Codes</h5><p>有时需要抽取网页中的颜色代码，可以使用下面的表达式。<br><code>/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/</code><br>#####33 16. 提取网页图片<br>假若你想提取网页中所有图片信息，可以利用下面的表达式。<br><code>/\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\&quot;\\&#39;]{0,1}([^\\&quot;\\&#39;\\ &gt;]*)/</code></p>
+<h5 id="17-提取页面超链接"><a href="#17-提取页面超链接" class="headerlink" title="17. 提取页面超链接"></a>17. 提取页面超链接</h5><p>提取html中的超链接。<br><code>/(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&#39;.implode(&#39;|(?:www\\.)?&#39;, $follow_list).&#39;))[^&quot;]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;/</code></p>
+<h5 id="18-查找CSS属性"><a href="#18-查找CSS属性" class="headerlink" title="18. 查找CSS属性"></a>18. 查找CSS属性</h5><p>通过下面的表达式，可以搜索到相匹配的CSS属性。<br><code>/^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}/</code></p>
+<h5 id="19-抽取注释"><a href="#19-抽取注释" class="headerlink" title="19. 抽取注释"></a>19. 抽取注释</h5><p>如果你需要移除HMTL中的注释，可以使用如下的表达式。<br><code>&lt;!--(.*?)--&gt;</code><br>#####20. 匹配HTML标签<br>通过下面的表达式可以匹配出HTML中的标签属性。<br><code>&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:&quot;.*?&quot;|&#39;.*?&#39;|[\\^&#39;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</code></p>
+<hr>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">zhuxinzeng.club/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE/"># 正则表达</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/">JavaScript执行机制</a>
+            
+            
+            <a class="next" rel="next" href="/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">HTML知识总结</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>Javascript之闭包详解 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Javascript之闭包详解</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 22, 2018&nbsp;&nbsp;21:07:16</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="认识闭包"><a href="#认识闭包" class="headerlink" title="认识闭包"></a>认识闭包</h3><p>不少的开发人员总是搞不清<em>匿名函数</em>和<em>闭包</em>这两个概念。从定义上来讲，闭包指的是有权访问另一个函数作用域中的变量的函数。<br>  创建闭包的方式就是在一个函数的内部创建另一个函数，而函数内部定义的函数会将外部函数的活动对象添加到它的作用域链中。例如以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">        var a&#x3D;5;</span><br><span class="line">        return function()&#123;</span><br><span class="line">            a++;</span><br><span class="line">            console.log(a);     &#x2F;&#x2F;a变量肯定是可以访问的</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var f1&#x3D;fn();        &#x2F;&#x2F;f1指向匿名函数</span><br><span class="line">    f1();       &#x2F;&#x2F;6</span><br><span class="line">    f1();       &#x2F;&#x2F;7</span><br><span class="line">    f1();       &#x2F;&#x2F;8</span><br></pre></td></tr></table></figure>
+<p>代码执行到20行fn函数执行完毕，返回匿名函数。一般认为函数执行完毕，变量就会释放，但是此时由于js引擎发现匿名函数要使用a变量，所以a变量并不能得到释放，而是把a变量放在匿名函数可以访问到的地方去了。<br>a变量存在于f1函数可以访问到的地方，当然此时a变量只能被f1函数访问。</p>
+<h3 id="闭包的应用"><a href="#闭包的应用" class="headerlink" title="闭包的应用"></a>闭包的应用</h3><p>模块化思想 防止变量被破坏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;模块化思想：也是一种设计模式</span><br><span class="line">    var ktv&#x3D;(function KTV()&#123;</span><br><span class="line">        &#x2F;&#x2F;为了保护leastPrice变量，将它放在函数内部</span><br><span class="line">        var leastPrice&#x3D;1000;</span><br><span class="line"></span><br><span class="line">        var total&#x3D;0;</span><br><span class="line"></span><br><span class="line">        return &#123;</span><br><span class="line">            &#x2F;&#x2F;购物</span><br><span class="line">            buy:function(price)&#123;</span><br><span class="line">                total+&#x3D;price;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#x2F;&#x2F;结账</span><br><span class="line">            pay:function()&#123;</span><br><span class="line">                if(total&lt;leastPrice)&#123;</span><br><span class="line">                    console.log(&#39;请继续购物&#39;);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    console.log(&#39;欢迎下次光临&#39;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+<p>有问题：来了一个工商局的朋友要来唱K<br>    –&gt;可能老板需要去修改最低消费的金额<br>    –&gt;但是并不能让老板直接去修改leastPrice，或者说不能把leastPrice作为全局变量。所以有以下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">        editLeast:function(id,price)&#123;</span><br><span class="line">            if(id&#x3D;&#x3D;&#x3D;888)&#123;</span><br><span class="line">                leastPrice&#x3D;price;</span><br><span class="line">                console.log(&quot;现在最低消费金额为：&quot;,leastPrice);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                console.log(&#39;权限不足&#39;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+
+<p>  防止变量被破坏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var datepicker&#x3D;(function()&#123;</span><br><span class="line">    var hour&#x3D;3600*1000;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(&#39;日期控件初始化&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">var common&#x3D;(function()&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        isStr:function()&#123;</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br><span class="line">        isNumber:function()&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<h3 id="闭包内存释放"><a href="#闭包内存释放" class="headerlink" title="闭包内存释放"></a>闭包内存释放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function f1()&#123;</span><br><span class="line">        var a&#x3D;5;</span><br><span class="line">        return function()&#123;</span><br><span class="line">            a++;</span><br><span class="line">            console.log(a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var q1&#x3D;f1();</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;要想释放q1里面保存的a，只能通过释放q1</span><br><span class="line">    q1&#x3D;null;    &#x2F;&#x2F;q1&#x3D;undefined</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong><em>当函数内部定义其他函数时，就创建了闭包。闭包有权访问函数内部的所有变量原理如下：</em></strong></p>
+<p>在后台执行环境中，闭包的作用域链包含着它自己本身的作用域，以及包含函数的作用域和全局作用域。<br>通常函数作用域及其所有的变量在执行完毕之后都会被销毁，但是当函数返回一个了一个闭包时，这个函数的作用域将会一直在内存中保存直到闭包不存在为止。</p>
+<p><strong><em>使用闭包可以在JS中模仿块级作用域（JS本身是没有块级作用域的）要点如下：</em></strong></p>
+<p>创建并立即调用一个函数，这样既可以执行其中的代码，又不会在内存中留下对该函数的引用。<br>结果就是函数内部的所有变量就会被立即销毁–除非将某些变量赋值给了包含作用域中的变量。</p>
+<p><strong><em>闭包还可以用于在对象中创建私有变量</em></strong></p>
+<p>即使Js中没有正式的私有对象的属性概念，但是可以使用闭包来实现公有方法，而通过公有方法可以访问包含在作用域中的定义的变量。<br>有权访问私有变量的方法叫做特权方法。可以使用构造函数模式，原型模式来实现自定义的类型的特权方法。</p>
+<hr>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2018/05/22/Javascript%E4%B9%8B%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/">zhuxinzeng.club/2018/05/22/Javascript%E4%B9%8B%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Javascript/"># Javascript</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2018/06/16/Javascript%E4%B9%8B%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">Javascript之面向对象</a>
+            
+            
+            <a class="next" rel="next" href="/2018/05/15/CSS3%E6%96%B0%E7%89%B9%E6%80%A7/">CSS3新特性</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

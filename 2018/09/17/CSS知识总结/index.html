@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Brace">
+
+
+    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
+
+
+
+
+<title>CSS知识总结 | Brace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">CSS知识总结</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Brace</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 17, 2018&nbsp;&nbsp;16:00:13</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h5 id="1-css盒子模型，box-sizing属性的理解"><a href="#1-css盒子模型，box-sizing属性的理解" class="headerlink" title="1. css盒子模型，box-sizing属性的理解"></a>1. css盒子模型，box-sizing属性的理解</h5><p>css的盒模型由content(内容)、padding(内边距)、border(边框)、margin(外边距)组成。但盒子的大小由content+padding+border这几部分决定<br>box-sizing是一个CSS3属性，与盒子模型有着密切联系。即决定元素的宽高如何计算，box-sizing有三个属性：<br>box-sizing: content-box|border-box|inherit:<br>    •    content-box 使得元素的宽高即为内容区的宽高(默认模式)<br>    •    border-box: 计算方式content + padding + border = 本身元素大小，即缩小了content大小<br>    •    inherit 指定box-sizing属性的值，应该从父元素继承</p>
+<h5 id="2-清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法"><a href="#2-清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法" class="headerlink" title="2. 清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法"></a>2. 清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法</h5><p>浮动的元素是脱离文档标准流的，如果我们不清楚浮动，那么就会造成父元素高度塌陷，影响页面布局。<br>清除浮动的方式：<br>    •    为父元素设置高度<br>    •    为父元素添加overflow:hidden<br>    •    伪元素<br><code>.fix::after { 
+     content:&quot;&quot;; 
+     display:block; 
+     clear:both;
+}</code><br>使用伪元素的好处：不增加冗余的DOM节点，符合语义化<br>overflow:hidden可以触发BFC机制。BFC：块级格式化上下文，创建了 BFC的元素就是一个独立的盒子，它规定了内部如何布局，并且与这个独立盒子里的布局不受外部影响，当然它也不会影响到外面的元素，计算BFC的高度时，浮动元素也参与计算</p>
+<h5 id="3-如何让一个不定宽高的盒子水平垂直居中"><a href="#3-如何让一个不定宽高的盒子水平垂直居中" class="headerlink" title="3. 如何让一个不定宽高的盒子水平垂直居中"></a>3. 如何让一个不定宽高的盒子水平垂直居中</h5><p>定位的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.father &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.son &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>css3属性<br><code>.father {
+    position: relative;
+}
+.son {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}</code><br>flex布局<br><code>.father {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></p>
+<h5 id="4-px和em和rem的区别"><a href="#4-px和em和rem的区别" class="headerlink" title="4. px和em和rem的区别"></a>4. px和em和rem的区别</h5><p>px: 像素，相对长度单位。像素px是相对于显示器屏幕分辨率而言的<br>em的值并不是固定的，会继承父级元素的字体大小，代表倍数<br>rem的值并不是固定的，始终是基于根元素 <html> 的，也代表倍数</p>
+<h5 id="5-position的值有哪些"><a href="#5-position的值有哪些" class="headerlink" title="5. position的值有哪些"></a>5. position的值有哪些</h5><p>static： 默认值。没有定位，元素出现在正常的流中<br>relative（相对定位）：生成相对定位的元素,相对于其正常（原先本身）位置进行定位<br>absolute（绝对定位）：生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位<br>fixed（固定定位）：生成绝对定位的元素，相对于浏览器窗口进行定位</p>
+<h5 id="6-display-none与visibility：hidden的区别"><a href="#6-display-none与visibility：hidden的区别" class="headerlink" title="6. display:none与visibility：hidden的区别"></a>6. display:none与visibility：hidden的区别</h5><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g1irt7heznj30vk0cydjs.jpg" alt=""></p>
+<h5 id="7-CSS中link-和-import的区别"><a href="#7-CSS中link-和-import的区别" class="headerlink" title="7. CSS中link 和@import的区别"></a>7. CSS中link 和@import的区别</h5><p>link属于XHTML标签，@import完全是CSS提供的一种方式,只能加载CSS<br>加载顺序的差别，当一个页面被加载的时候，link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载<br>兼容性的差别。由于@import是CSS2.1提出的所以老的浏览器不支持，而link标签无此问题<br>当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的</p>
+<h5 id="8-什么是响应式设计，响应式设计的基本原理是什么"><a href="#8-什么是响应式设计，响应式设计的基本原理是什么" class="headerlink" title="8. 什么是响应式设计，响应式设计的基本原理是什么"></a>8. 什么是响应式设计，响应式设计的基本原理是什么</h5><p>响应式网站设计是一个网站能够兼容多个终端，而不是为每一个终端做一个特定的版本。基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理</p>
+<h5 id="9-为什么要初始化CSS样式"><a href="#9-为什么要初始化CSS样式" class="headerlink" title="9. 为什么要初始化CSS样式"></a>9. 为什么要初始化CSS样式</h5><p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对 CSS 初始化往往会出现浏览器之间的页面显示差异<br>初始化样式会对 SEO 有一定的影响</p>
+<h5 id="10-CSS3有哪些新特性"><a href="#10-CSS3有哪些新特性" class="headerlink" title="10. CSS3有哪些新特性"></a>10. CSS3有哪些新特性</h5><p>•实现圆角border-radius，阴影box-shadow，边框图片border-image<br>•对文字加特效text-shadow，强制文本换行word-wrap，线性渐变linear-gradient<br>•实现旋转transform:rotate(90deg),缩放scale(0.85,0.90),translate(0px,-30px)定位,倾斜skew(-9deg,0deg);<br>•增加了更多的CSS选择器、多背景、rgba()<br>•唯一引入的伪元素是::selection；<br>•实现媒体查询@media，多栏布局flex<br>•过渡transition 动画animation</p>
+<h5 id="11-before-和-after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用"><a href="#11-before-和-after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用" class="headerlink" title="11. ::before 和 :after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用"></a>11. ::before 和 :after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用</h5><p>单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。（伪元素由双冒号和伪元素名称组成）,双冒号是在当前规范中引入的，用于区分伪类和伪元素</p>
+<h5 id="12-CSS优化、提高性能的方法有哪些"><a href="#12-CSS优化、提高性能的方法有哪些" class="headerlink" title="12. CSS优化、提高性能的方法有哪些"></a>12. CSS优化、提高性能的方法有哪些</h5><p>·移除空的css规则（Remove empty rules）<br>·正确使用display的属性<br>·不滥用浮动、web字体<br>·不声明过多的font-size<br>·遵守盒模型规则<br>·尽量减少页面重排、重绘<br>·抽象提取公共样式，减少代码量</p>
+<h5 id="13-重绘和回流"><a href="#13-重绘和回流" class="headerlink" title="13. 重绘和回流"></a>13. 重绘和回流</h5><p>重绘和回流</p>
+<h5 id="14-flex布局"><a href="#14-flex布局" class="headerlink" title="14. flex布局"></a>14. flex布局</h5><p>可以参考一下阮大大的文章 <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">flex布局教程–阮一峰 </a></p>
+<h5 id="15-css预处理器"><a href="#15-css预处理器" class="headerlink" title="15. css预处理器"></a>15. css预处理器</h5><p>提供了一种css的书写方式，常见的就是 <a href="http://sass.bootcss.com/docs/sass-reference/" target="_blank" rel="noopener">SAAS文档</a> 和 <a href="https://less.bootcss.com/" target="_blank" rel="noopener">LESS文档</a></p>
+<hr>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Brace</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="zhuxinzeng.club/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">zhuxinzeng.club/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">HTML知识总结</a>
+            
+            
+            <a class="next" rel="next" href="/2018/06/19/ES6%E5%9F%BA%E7%A1%80/">ES6基础</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
