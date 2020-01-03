@@ -1,172 +1,1323 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="Brace">
-
-
-    <meta name="subtitle" content="Among all things, the most beautiful things never fade">
-
-
-
-
-<title>Brace</title>
-
-
-
-    <link rel="icon" href="/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+  <meta charset="utf-8" />
     
-    <link rel="stylesheet" href="/css/style.css">
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Brace
+  </title>
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
 
 
+  
 
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
-
+  
 
 <meta name="generator" content="Hexo 4.2.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
 
-        </div>
-    </nav>
+</html>
+
+<body>
+  <div id="app">
+    <main class="content">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/zhuxinzeng"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Brace</a></h1>
+      <h2>Among all things, the most beautiful things never fade</h2>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="#main" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    <h1 class="page-type-title"></h1>
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
+    
+    <article id="post-Vue资源" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
 
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-        <div class="main">
-            
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/avatar.jpeg"></a>
-        </div>
-        <div class="nickname">Jeremy Bentham</div>
-        <div class="description"><p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> <br>Fusce eget urna vitae velit <em>eleifend interdum at ac</em> nisi.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="ZhiHu" href="https://www.zhihu.com/people/sirice" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-zhihu"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Instagram" href="">
-                        
-                        
-                            <i class="iconfont icon-instagram"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Reddit" href="">
-                        
-                        
-                            <i class="iconfont icon-reddit"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" href="https://github.com/Siricee" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/11/02/Vue%E8%B5%84%E6%BA%90/"
+    >Vue资源</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/11/02/Vue%E8%B5%84%E6%BA%90/" class="article-date">
+  <time datetime="2019-11-02T02:53:32.000Z" itemprop="datePublished">2019-11-02</time>
+</a>
+      
     </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h3 id="UI组件"><a href="#UI组件" class="headerlink" title="UI组件"></a>UI组件</h3><p><a href="https://github.com/ElemeFE/element" target="_blank" rel="noopener">element</a> ★13489 - 饿了么出品的Vue2的web UI工具套件</p>
+<p><a href="https://github.com/airyland/vux" target="_blank" rel="noopener">Vux</a>★8133 - 基于Vue和WeUI的组件库</p>
+<p><a href="https://github.com/iview/iview" target="_blank" rel="noopener">iview</a>★6634 - 基于 Vuejs 的开源 UI 组件库</p>
+<p><a href="https://github.com/ElemeFE/mint-ui" target="_blank" rel="noopener">mint-ui</a>★6253 - Vue 2的移动UI元素</p>
+<p><a href="https://github.com/museui/muse-ui" target="_blank" rel="noopener">muse-ui</a>★3705 - 三端样式一致的响应式 UI 库</p>
+<p><a href="https://github.com/njleonzhang/vue-data-tables" target="_blank" rel="noopener">vue-data-tables</a>★266 - VueJS2数据表格</p>
+<h3 id="开发框架"><a href="#开发框架" class="headerlink" title="开发框架"></a>开发框架</h3><p><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">vue.js</a>★56380 - 流行的轻量高效的前端组件化方案</p>
+<p><a href="https://github.com/vue-bulma/vue-admin" target="_blank" rel="noopener">vue-admin</a>★4612 - Vue管理面板框架</p>
+<p><a href="https://github.com/quasarframework/quasar" target="_blank" rel="noopener">quasar</a>★2353 - 响应式网站和混合移动应用程序</p>
+<p><a href="https://github.com/SimulatedGREG/electron-vue" target="_blank" rel="noopener">electron-vue </a>★2085 - Electron及VueJS快速启动样板</p>
+<p><a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener">vue-element-admin</a> ★1986 - vue2管理系统模板</p>
+<h3 id="实用库"><a href="#实用库" class="headerlink" title="实用库"></a>实用库</h3><p><a href="https://github.com/vuejs/vuex" target="_blank" rel="noopener">vuex</a> ★8043 - 专为 Vue.js 应用程序开发的状态管理模式</p>
+<p><a href="https://github.com/vuejs/vue-loader" target="_blank" rel="noopener">vue-loader</a>★1847 - Vue.js 针对Webpack的组件装载插件</p>
+<p><a href="https://github.com/kazupon/vue-validator" target="_blank" rel="noopener">vue-validator </a>★1807 - vue的验证器插件</p>
+<p><a href="https://github.com/hilongjw/vue-lazyload" target="_blank" rel="noopener">vue-lazyload </a>★1224 - 用于懒加载的Vue模块</p>
+<p><a href="https://github.com/vuelidate/vuelidate" target="_blank" rel="noopener">vuelidate</a>★1075 - 简单轻量级的基于模块的Vue.js验证</p>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p><a href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener">nuxt.js </a>★4564 - 用于服务器渲染Vue app的最小化框架</p>
+<p><a href="https://github.com/egoist/unvue" target="_blank" rel="noopener">unvue</a>★310 - 使用简单的通用VueJS应用</p>
+<p><a href="https://github.com/danmademe/express-vue" target="_blank" rel="noopener">express-vue</a>★302 - 简单的使用服务器端渲染vue.js</p>
+<h3 id="辅助工具"><a href="#辅助工具" class="headerlink" title="辅助工具"></a>辅助工具</h3><p><a href="https://github.com/vue-play/vue-play" target="_blank" rel="noopener">vue-play</a>★641 - 展示Vue组件的最小化框架</p>
+<p><a href="https://github.com/MiCottOn/DejaVue" target="_blank" rel="noopener">DejaVue</a>★635 - Vuejs可视化及压力测试</p>
+<p><a href="https://github.com/OYsun/vscode-VueHelper" target="_blank" rel="noopener">vscode-VueHelper</a>★228 - 目前vscode最好的vue代码提示插件</p>
+<h3 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h3><p><a href="https://github.com/phanan/koel" target="_blank" rel="noopener">koel</a>★7773 - 基于网络的个人音频流媒体服务</p>
+<p><a href="https://github.com/pagekit/pagekit" target="_blank" rel="noopener">pagekit</a>★4225 - 轻量级的CMS建站系统</p>
+<p><a href="https://github.com/lin-xin/vue-manage-system" target="_blank" rel="noopener">vue-manage-system</a>★2057 - 后台管理系统解决方案</p>
+<p><a href="https://github.com/Vuedo/vuedo" target="_blank" rel="noopener">vuedo</a>★1265 - 博客平台</p>
+<p><a href="https://github.com/jackhutu/jackblog-vue" target="_blank" rel="noopener">jackblog-vue</a>★1120 - 个人博客系统</p>
+<p><a href="https://github.com/jcc/blog" target="_blank" rel="noopener">PJ Blog</a>★1018 - 开源博客</p>
+<p><a href="https://github.com/lzxb/vue-cnode" target="_blank" rel="noopener">vue-cnode</a> ★787 - 重写vue版cnode社区</p>
+<p><a href="https://github.com/ericjjj/vms" target="_blank" rel="noopener">vms</a>★629 - vuejs2管理系统</p>
+<p><a href="https://github.com/ycwalker/CMS-of-Blog" target="_blank" rel="noopener">CMS-of-Blog</a>★541 - 博客内容管理器</p>
+<p><a href="https://github.com/Caiyeon/goldfish" target="_blank" rel="noopener">goldfish</a>★518 - 用于HashiCorp Vault的Admin UI</p>
+<p><a href="https://github.com/mrgodhani/rss-reader" target="_blank" rel="noopener">rss-reader</a>★368 - 简单的rss阅读器</p>
+<h3 id="Demo-示例"><a href="#Demo-示例" class="headerlink" title="Demo 示例"></a>Demo 示例</h3><p><a href="https://github.com/bailicangdu/vue2-elm" target="_blank" rel="noopener">vue2-elm</a>★8036 - 重写饿了么webapp</p>
+<p><a href="https://github.com/shinygang/Vue-cnodejs" target="_blank" rel="noopener">Vue-cnodejs</a>★2491 - 基于vue重写Cnodejs.org的webapp</p>
+<p><a href="https://github.com/javaSwing/NeteaseCloudWebApp" target="_blank" rel="noopener">NeteaseCloudWebApp</a>★1549 - 高仿网易云音乐的webapp</p>
+<p><a href="https://github.com/bailicangdu/vue2-happyfri" target="_blank" rel="noopener">vue2-happyfri</a> ★1535 - vue2及vuex的入门练习项目</p>
+<p><a href="https://github.com/hilongjw/vue-zhihu-daily" target="_blank" rel="noopener">vue-zhihu-daily</a>★1010 - 知乎日报 with Vuejs</p>
+<p><a href="https://github.com/lzxb/vue2-demo" target="_blank" rel="noopener">vue2-demo</a> ★994 - 从零构建vue2 + vue-router + vuex 开发环境</p>
+<p><a href="https://github.com/useryangtao/vue-wechat" target="_blank" rel="noopener">vue-wechat</a>★939 - vue.js开发微信app界面</p>
+<p><a href="https://github.com/liangxiaojuan/eleme" target="_blank" rel="noopener">eleme</a>★882 - 高仿饿了么app商家详情</p>
+<p><a href="https://github.com/kenberkeley/vue-demo" target="_blank" rel="noopener">vue-demo</a>★755 - vue简易留言板</p>
+<p><a href="https://github.com/lybenson/bilibili-vue" target="_blank" rel="noopener">bilibili-vue</a>★694 - 全栈式开发bilibili首页</p>
+<p><a href="https://github.com/codecasts/spa-starter-kit" target="_blank" rel="noopener">spa-starter-kit</a>★646 - 单页应用启动套件</p>
+<p><a href="https://github.com/SimonZhangITer/VueDemo_Sell_Eleme" target="_blank" rel="noopener">VueDemo_Sell_Eleme</a>★636 - Vue2高仿饿了么外卖平台</p>
+<p><a href="https://github.com/Sioxas/vue-music" target="_blank" rel="noopener">vue-music</a> ★621 - Vue 音乐搜索播放</p>
+<p><a href="https://github.com/jeneser/douban" target="_blank" rel="noopener">douban</a> ★606 - 基于vue全家桶的精致豆瓣DEMO</p>
+<p><a href="https://github.com/liangxiaojuan/vue-Meizi" target="_blank" rel="noopener">vue-Meizi</a>★604 - vue最新实战项目</p>
+<p><a href="https://github.com/zhengguorong/maizuo" target="_blank" rel="noopener">maizuo</a>★603 - vue/vuex/redux仿卖座网</p>
+<p><a href="https://github.com/zhaohaodang/vue-WeChat" target="_blank" rel="noopener">vue-WeChat</a>★558 - 基于Vue2高仿微信App的单页应用</p>
+<p><a href="https://github.com/lavyun/vue-demo-kugou" target="_blank" rel="noopener">vue-demo-kugou</a>★500 - vuejs仿写酷狗音乐webapp</p>
+<p><a href="https://github.com/bailicangdu/vue2-manage" target="_blank" rel="noopener">vue2-manage</a>★457 - 基于 vue + element-ui 的后台管理系统</p>
+<p><a href="https://github.com/yatessss/zhihudaily-vue" target="_blank" rel="noopener">zhihudaily-vue</a>★455 - 知乎日报web版</p>
+<p><a href="https://github.com/ShanaMaid/vue-163-music" target="_blank" rel="noopener">vue-163-music</a>★448 - vue仿网易云音乐客户端版</p>
+<p><a href="https://github.com/andylei18/vue-shopping" target="_blank" rel="noopener">vue-shopping</a>★404 - 蘑菇街移动端</p>
+<p><a href="https://github.com/hzzly/xyy-vue" target="_blank" rel="noopener">xyy-vue</a>★396 - 大学生交流平台</p>
+<p><a href="https://github.com/wendaosanshou/mi-by-vue" target="_blank" rel="noopener">mi-by-vue</a>★291 - VueJS仿小米官网</p>
+<p><a href="https://github.com/Reusjs/VueMusic-PC" target="_blank" rel="noopener">VueMusic-PC</a>★260 - Vue.js高还原网易云音乐系列</p>
+<p><a href="https://github.com/yjj5855/node-vue-server-webpack" target="_blank" rel="noopener">node-vue-server-webpack</a>★253 - Node.js+Vue.js+webpack快速开发框架</p>
+<p><a href="https://github.com/Werb/Pixel-Web" target="_blank" rel="noopener">Pixel-Web</a>★198 - 一个 Vue 微博客户端</p>
+<p><a href="https://github.com/RalfZhang/Vdo" target="_blank" rel="noopener">Vdo</a>★179 - VueJS与MD重构豆瓣</p>
+<p><a href="https://github.com/rokups/hello-vue-django" target="_blank" rel="noopener">hello-vue-django</a>★160 - 使用带有Django的vuejs的样板项目</p>
+<p><a href="https://github.com/renjie1996/tencent-sports" target="_blank" rel="noopener">tencent-sports</a>★154 - Vue全家桶仿腾讯体育</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/11/02/Vue%E8%B5%84%E6%BA%90/" data-id="ck4y8kz100009qgnr3e6z1d40"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-微信小程序之环境配置及搭建" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/06/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%90%AD%E5%BB%BA/"
+    >微信小程序之环境配置及搭建</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/06/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time datetime="2019-06-01T08:18:29.000Z" itemprop="datePublished">2019-06-01</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h4 id="准备域名和证书"><a href="#准备域名和证书" class="headerlink" title="准备域名和证书"></a>准备域名和证书</h4><h5 id="域名注册"><a href="#域名注册" class="headerlink" title="域名注册"></a>域名注册</h5><p>如果您还没有域名，可以在腾讯云上选购。</p>
+<h5 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h5><p>域名购买完成后,需要将域名解析到实验云主机上。域名设置解析后需要过一段时间才会生效，通过 ping 命令检查域名是否生效。</p>
+<h5 id="申请SSL证书"><a href="#申请SSL证书" class="headerlink" title="申请SSL证书"></a>申请SSL证书</h5><p>腾讯云提供了 SSL，证书的免费申请。申请提交后，审批结果会以短信的形式通知。审批通过后，可以到 SSL 控制台下载您的证书文件。</p>
+<h4 id="搭建小程序开发环境"><a href="#搭建小程序开发环境" class="headerlink" title="搭建小程序开发环境"></a>搭建小程序开发环境</h4><h5 id="注册开发者账号"><a href="#注册开发者账号" class="headerlink" title="注册开发者账号"></a>注册开发者账号</h5><p>如果你还不是小程序开发者，请先在微信公众平台并注册：<br><a href="https://mp.weixin.qq.com" target="_blank" rel="noopener">https://mp.weixin.qq.com</a></p>
+<h5 id="配置小程序服务器信息"><a href="#配置小程序服务器信息" class="headerlink" title="配置小程序服务器信息"></a>配置小程序服务器信息</h5><p>登录微信公众平台后，依次进入 设置 - 开发设置 - 服务器域名 - 修改。<br>扫码完成身份校验后，request 合法域名和 socket 合法域名均填写在上一步准备好的域名地址。<br>配置完成后，点击 保存并提交。</p>
+<h5 id="运行配套小程序代码"><a href="#运行配套小程序代码" class="headerlink" title="运行配套小程序代码"></a>运行配套小程序代码</h5><p>要运行本实验配套的小程序代码，文末下载相关的源码和开发者工具。</p>
+<h5 id="设置实验域名"><a href="#设置实验域名" class="headerlink" title="设置实验域名"></a>设置实验域名</h5><p>在开发工具的编辑面板中，选中app.js进行编辑，需要修改小程序通信域名，请参考下面的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    config: &#123;</span><br><span class="line">        host: &#39;&#39; &#x2F;&#x2F; 这个地方填写你的域名</span><br><span class="line">    &#125;,</span><br><span class="line">    onLaunch () &#123;</span><br><span class="line">        console.log(&#39;App.onLaunch()&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="搭建HTTP服务"><a href="#搭建HTTP服务" class="headerlink" title="搭建HTTP服务"></a>搭建HTTP服务</h4><h5 id="安装NodeJs和NPM"><a href="#安装NodeJs和NPM" class="headerlink" title="安装NodeJs和NPM"></a>安装NodeJs和NPM</h5><p>使用下面的命令安装 NodeJS 和 NPM</p>
+<figure class="highlight plain"><figcaption><span>--silent --location</span><a href="https://rpm.nodesource.com/setup_8.x" target="_blank" rel="noopener">| sudo bash -</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nodejs -y</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用下面的命令测试安装结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h5 id="编写HTTPServer源码"><a href="#编写HTTPServer源码" class="headerlink" title="编写HTTPServer源码"></a>编写HTTPServer源码</h5><p>创建工作目录<br>使用下面的命令在服务器创建一个工作目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;data&#x2F;release&#x2F;weapp</span><br></pre></td></tr></table></figure>
+<p>进入此工作目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;release&#x2F;weapp</span><br></pre></td></tr></table></figure>
+<p>创建 package.json在刚才创建的工作目录创建package.json，添加我们服务器包的名称和版本号，可参考下面的示例。进入此工作目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;weapp&quot;,</span><br><span class="line">    &quot;version&quot;: &quot;1.0.0&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完成后，使用 Ctrl + S 保存文件添加 Server 源码在工作目录创建 app.js，使用 Express.js 来监听 8765 端口，可参考下面的示例代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 引用 express 来支持 HTTP Server 的实现</span><br><span class="line">const express &#x3D; require(&#39;express&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建一个 express 实例</span><br><span class="line">const app &#x3D; express();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 实现唯一的一个中间件，对于所有请求，都输出 &quot;Response from express&quot;</span><br><span class="line">app.use((request, response, next) &#x3D;&gt; &#123;</span><br><span class="line">    response.write(&#39;Response from express&#39;);</span><br><span class="line">    response.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 监听端口，等待连接</span><br><span class="line">const port &#x3D; 8765;</span><br><span class="line">app.listen(port);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 输出服务器启动日志</span><br><span class="line">console.log(&#96;Server listening at http:&#x2F;&#x2F;127.0.0.1:$&#123;port&#125;&#96;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="运行HTTP服务"><a href="#运行HTTP服务" class="headerlink" title="运行HTTP服务"></a>运行HTTP服务</h5><p>安装 PM2  在开始之前，我们先来安装 PM2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pm2 --global</span><br></pre></td></tr></table></figure>
+<p>PM2 安装时间可能稍长，请耐心等候。 </p>
+<p>安装 Express</p>
+<p>我们的服务器源码里使用到了 Express 模块，下面的命令使用 NPM 来安装 Express</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;release&#x2F;weapp</span><br><span class="line">npm install express --save</span><br></pre></td></tr></table></figure>
+<p>启动服务  安装完成后，使用 PM2 来启动 HTTP 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;release&#x2F;weapp</span><br><span class="line">pm2 start app.js</span><br></pre></td></tr></table></figure>
+<p>现在，您的HTTP服务已经在云服务器上运行要查看服务输出的日志，可以使用下面的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 logs</span><br></pre></td></tr></table></figure>
+<h4 id="搭建HTTPS服务"><a href="#搭建HTTPS服务" class="headerlink" title="搭建HTTPS服务"></a>搭建HTTPS服务</h4><h5 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h5><p>在 CentOS 上，可直接使用 yum 来安装 Nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用 nginx 命令启动 Nginx：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+<p>此时，访问 服务器可以看到 Nginx 的测试页面 </p>
+<h5 id="配置HTTPS反向代理"><a href="#配置HTTPS反向代理" class="headerlink" title="配置HTTPS反向代理"></a>配置HTTPS反向代理</h5><p>外网用户访问服务器的 Web 服务由 Nginx 提供，Nginx 需要配置反向代理才能使得 Web 服务转发到本地的 Node 服务。<br>先将之前下载的 SSL 证书(解压后 Nginx 目录分别以 crt 和 key 作为后缀的文件)通过拖动到左侧文件浏览器/etc/nginx目录的方式来上传文件到服务器上<br>如何上传 SSL 证书到 /etc/nginx 目录<br>Nginx 配置目录在 /etc/nginx/conf.d，我们在该目录创建 ssl.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        server_name www.example.com; # 改为绑定证书的域名</span><br><span class="line">        # ssl 配置</span><br><span class="line">        ssl on;</span><br><span class="line">        ssl_certificate 1_www.example.com_bundle.crt; # 改为自己申请得到的 crt 文件的名称</span><br><span class="line">        ssl_certificate_key 2_www.example.com.key; # 改为自己申请得到的 key 文件的名称</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:8765;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>按 Ctrl + S 保存配置文件，让 Nginx 重新加载配置使其生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<p>在浏览器通过 https 的方式访问你解析的域名来测试 HTTPS 是否成功启动</p>
+<h5 id="在小程序中测试HTTPS访问"><a href="#在小程序中测试HTTPS访问" class="headerlink" title="在小程序中测试HTTPS访问"></a>在小程序中测试HTTPS访问</h5><p>打开配套的小程序，点击 实验一：HTTPS，点击 发送请求 来测试访问结果。<br>如果服务器响应成功，请点击下一步。</p>
+<h4 id="小程序会话"><a href="#小程序会话" class="headerlink" title="小程序会话"></a>小程序会话</h4><h5 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h5><p>使用 Yum 在机器上安装 MongoDB及其客户端命令行工具：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mongodb-server mongodb -y</span><br></pre></td></tr></table></figure>
+
+<p>安装结束后，可以使用下面的命令查看安装的版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongod --version</span><br><span class="line">mongo --version</span><br></pre></td></tr></table></figure>
+<h5 id="启动MongoDB"><a href="#启动MongoDB" class="headerlink" title="启动MongoDB"></a>启动MongoDB</h5><p>创建目录，用于 MongoDB 数据和日志存储：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;data&#x2F;mongodb</span><br><span class="line">mkdir -p &#x2F;data&#x2F;logs&#x2F;mongodb</span><br></pre></td></tr></table></figure>
+
+<p>创建后，使用下面的命令来启动 MongoDB：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --fork --dbpath &#x2F;data&#x2F;mongodb --logpath &#x2F;data&#x2F;logs&#x2F;mongodb&#x2F;weapp.log</span><br></pre></td></tr></table></figure>
+<h5 id="添加MongoDB用户"><a href="#添加MongoDB用户" class="headerlink" title="添加MongoDB用户"></a>添加MongoDB用户</h5><p>登录本地 MongoDB 服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>登录后，创建一个用户 weapp：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use weapp;</span><br><span class="line">db.createUser(&#123; user: &#39;weapp&#39;, pwd: &#39;weapp-dev&#39;, roles: [&#39;dbAdmin&#39;, &#39;readWrite&#39;]&#125;);</span><br></pre></td></tr></table></figure>
+<p>创建完成后，使用 exit 退出命令行工具。</p>
+<h5 id="安装nodejs模块"><a href="#安装nodejs模块" class="headerlink" title="安装nodejs模块"></a>安装nodejs模块</h5><p>实现小程序的会话功能，我们需要安装 connect-mongo和 wafer-node-session<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> cd &#x2F;data&#x2F;release&#x2F;weapp</span><br><span class="line">npm install connect-mongo wafer-node-session --save</span><br></pre></td></tr></table></figure></p>
+<h5 id="实现小程序会话"><a href="#实现小程序会话" class="headerlink" title="实现小程序会话"></a>实现小程序会话</h5><p>在工作目录创建配置文件 config.js，用于保存我们服务所用的配置，可参考下面的实现(注：请将参考配置文件中的YORUAPPID和YOURAPPSECRET替换为你申请的小程序对应的 AppID 和 AppSecret)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">    serverPort: &#39;8765&#39;, </span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 小程序 appId 和 appSecret </span><br><span class="line">    &#x2F;&#x2F; 请到 https:&#x2F;&#x2F;mp.weixin.qq.com 获取 AppID 和 AppSecret</span><br><span class="line">    appId: &#39;YORU_APP_ID&#39;, </span><br><span class="line">    appSecret: &#39;YOUR_APP_SECRET&#39;, </span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; mongodb 连接配置，生产环境请使用更复杂的用户名密码</span><br><span class="line">    mongoHost: &#39;127.0.0.1&#39;, </span><br><span class="line">    mongoPort: &#39;27017&#39;, </span><br><span class="line">    mongoUser: &#39;weapp&#39;, </span><br><span class="line">    mongoPass: &#39;weapp-dev&#39;, </span><br><span class="line">    mongoDb: &#39;weapp&#39;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>编辑 app.js，添加会话实现逻辑，可参考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 引用 express 来支持 HTTP Server 的实现</span><br><span class="line">const express &#x3D; require(&#39;express&#39;);</span><br><span class="line">&#x2F;&#x2F; 引用 wafer-session 支持小程序会话</span><br><span class="line">const waferSession &#x3D; require(&#39;wafer-node-session&#39;); </span><br><span class="line">&#x2F;&#x2F; 使用 MongoDB 作为会话的存储</span><br><span class="line">const MongoStore &#x3D; require(&#39;connect-mongo&#39;)(waferSession); </span><br><span class="line">&#x2F;&#x2F; 引入配置文件</span><br><span class="line">const config &#x3D; require(&#39;.&#x2F;config&#39;); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建一个 express 实例</span><br><span class="line">const app &#x3D; express();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 添加会话中间件，登录地址是 &#x2F;login</span><br><span class="line">app.use(waferSession(&#123; </span><br><span class="line">    appId: config.appId, </span><br><span class="line">    appSecret: config.appSecret, </span><br><span class="line">    loginPath: &#39;&#x2F;login&#39;,</span><br><span class="line">    store: new MongoStore(&#123; </span><br><span class="line">        url: &#96;mongodb:&#x2F;&#x2F;$&#123;config.mongoUser&#125;:$&#123;config.mongoPass&#125;@$&#123;config.mongoHost&#125;:$&#123;config.mongoPort&#125;&#x2F;$&#123;config.mongoDb&#125;&#96; </span><br><span class="line">    &#125;) </span><br><span class="line">&#125;)); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 在路由 &#x2F;me 下，输出会话里包含的用户信息</span><br><span class="line">app.use(&#39;&#x2F;me&#39;, (request, response, next) &#x3D;&gt; &#123; </span><br><span class="line">    response.json(request.session ? request.session.userInfo : &#123; noBody: true &#125;); </span><br><span class="line">    if (request.session) &#123;</span><br><span class="line">        console.log(&#96;Wafer session success with openId&#x3D;$&#123;request.session.userInfo.openId&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 实现一个中间件，对于未处理的请求，都输出 &quot;Response from express&quot;</span><br><span class="line">app.use((request, response, next) &#x3D;&gt; &#123;</span><br><span class="line">    response.write(&#39;Response from express&#39;);</span><br><span class="line">    response.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 监听端口，等待连接</span><br><span class="line">app.listen(config.serverPort);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 输出服务器启动日志</span><br><span class="line">console.log(&#96;Server listening at http:&#x2F;&#x2F;127.0.0.1:$&#123;config.serverPort&#125;&#96;);</span><br></pre></td></tr></table></figure>
+<p>源码编写完成后，重启服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart app</span><br></pre></td></tr></table></figure>
+<p>重启后，使用配套的小程序完成会话测试：打开配套小程序 - 点击 实验二：会话 - 获取会话，如果您能看到您的微信头像，那就表示会话已经成功获取了。</p>
+<h4 id="websocket服务"><a href="#websocket服务" class="headerlink" title="websocket服务"></a>websocket服务</h4><h5 id="安装Node模块"><a href="#安装Node模块" class="headerlink" title="安装Node模块"></a>安装Node模块</h5><p>本实验使用 ws 模块来在服务器上支持 WebSocket 协议，下面使用 NPM 来安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;release&#x2F;weapp</span><br><span class="line">npm install ws --save</span><br></pre></td></tr></table></figure>
+<h5 id="实现Websocket服务器"><a href="#实现Websocket服务器" class="headerlink" title="实现Websocket服务器"></a>实现Websocket服务器</h5><p>创建 websocket.js，实现 WebSocket 服务，可参考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 引入 ws 支持 WebSocket 的实现</span><br><span class="line">const ws &#x3D; require(&#39;ws&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 导出处理方法</span><br><span class="line">exports.listen &#x3D; listen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 在 HTTP Server 上处理 WebSocket 请求</span><br><span class="line"> * @param &#123;http.Server&#125; server</span><br><span class="line"> * @param &#123;wafer.SessionMiddleware&#125; sessionMiddleware</span><br><span class="line"> *&#x2F;</span><br><span class="line">function listen(server, sessionMiddleware) &#123;</span><br><span class="line">    &#x2F;&#x2F; 使用 HTTP Server 创建 WebSocket 服务，使用 path 参数指定需要升级为 WebSocket 的路径</span><br><span class="line">    const wss &#x3D; new ws.Server(&#123; server, path: &#39;&#x2F;ws&#39; &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听 WebSocket 连接建立</span><br><span class="line">    wss.on(&#39;connection&#39;, (ws,request) &#x3D;&gt; &#123;&#x2F;&#x2F; 要升级到 WebSocket 协议的 HTTP 连接</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 被升级到 WebSocket 的请求不会被 express 处理，</span><br><span class="line">        &#x2F;&#x2F; 需要使用会话中间节获取会话</span><br><span class="line">        sessionMiddleware(request, null, () &#x3D;&gt; &#123;</span><br><span class="line">            const session &#x3D; request.session;</span><br><span class="line">            if (!session) &#123;</span><br><span class="line">                &#x2F;&#x2F; 没有获取到会话，强制断开 WebSocket 连接</span><br><span class="line">                ws.send(JSON.stringify(request.sessionError) || &quot;No session avaliable&quot;);</span><br><span class="line">                ws.close();</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 保留这个日志的输出可让实验室能检查到当前步骤是否完成</span><br><span class="line">            console.log(&#96;WebSocket client connected with openId&#x3D;$&#123;session.userInfo.openId&#125;&#96;);</span><br><span class="line">            serveMessage(ws, session.userInfo);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听 WebSocket 服务的错误</span><br><span class="line">    wss.on(&#39;error&#39;, (err) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(err);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单的 WebSocket 服务，对于客户端发来的所有消息都回复回去</span><br><span class="line"> *&#x2F;</span><br><span class="line">function serveMessage(ws, userInfo) &#123;</span><br><span class="line">    &#x2F;&#x2F; 监听客户端发来的消息</span><br><span class="line">    ws.on(&#39;message&#39;, (message) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(&#96;WebSocket received: $&#123;message&#125;&#96;);</span><br><span class="line">        ws.send(&#96;Server: Received($&#123;message&#125;)&#96;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听关闭事件</span><br><span class="line">    ws.on(&#39;close&#39;, (code, message) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(&#96;WebSocket client closed (code: $&#123;code&#125;, message: $&#123;message || &#39;none&#39;&#125;)&#96;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 连接后马上发送 hello 消息给会话对应的用户</span><br><span class="line">    ws.send(&#96;Server: 恭喜，$&#123;userInfo.nickName&#125;&#96;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编辑 app.js，调用 WebSocket 服务，可参考下面代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; HTTP 模块同时支持 Express 和 WebSocket</span><br><span class="line">const http &#x3D; require(&#39;http&#39;); </span><br><span class="line">&#x2F;&#x2F; 引用 express 来支持 HTTP Server 的实现</span><br><span class="line">const express &#x3D; require(&#39;express&#39;);</span><br><span class="line">&#x2F;&#x2F; 引用 wafer-session 支持小程序会话</span><br><span class="line">const waferSession &#x3D; require(&#39;wafer-node-session&#39;); </span><br><span class="line">&#x2F;&#x2F; 使用 MongoDB 作为会话的存储</span><br><span class="line">const MongoStore &#x3D; require(&#39;connect-mongo&#39;)(waferSession); </span><br><span class="line">&#x2F;&#x2F; 引入配置文件</span><br><span class="line">const config &#x3D; require(&#39;.&#x2F;config&#39;); </span><br><span class="line">&#x2F;&#x2F; 引入 WebSocket 服务实现</span><br><span class="line">const websocket &#x3D; require(&#39;.&#x2F;websocket&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建一个 express 实例</span><br><span class="line">const app &#x3D; express();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 独立出会话中间件给 express 和 ws 使用</span><br><span class="line">const sessionMiddleware &#x3D; waferSession(&#123;</span><br><span class="line">    appId: config.appId,</span><br><span class="line">    appSecret: config.appSecret,</span><br><span class="line">    loginPath: &#39;&#x2F;login&#39;,</span><br><span class="line">    store: new MongoStore(&#123;</span><br><span class="line">        url: &#96;mongodb:&#x2F;&#x2F;$&#123;config.mongoUser&#125;:$&#123;config.mongoPass&#125;@$&#123;config.mongoHost&#125;:$&#123;config.mongoPort&#125;&#x2F;$&#123;config.mongoDb&#125;&#96;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">app.use(sessionMiddleware);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 在路由 &#x2F;me 下，输出会话里包含的用户信息</span><br><span class="line">app.use(&#39;&#x2F;me&#39;, (request, response, next) &#x3D;&gt; &#123; </span><br><span class="line">    response.json(request.session ? request.session.userInfo : &#123; noBody: true &#125;); </span><br><span class="line">    if (request.session) &#123;</span><br><span class="line">        console.log(&#96;Wafer session success with openId&#x3D;$&#123;request.session.userInfo.openId&#125;&#96;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 实现一个中间件，对于未处理的请求，都输出 &quot;Response from express&quot;</span><br><span class="line">app.use((request, response, next) &#x3D;&gt; &#123;</span><br><span class="line">    response.write(&#39;Response from express&#39;);</span><br><span class="line">    response.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建 HTTP Server 而不是直接使用 express 监听</span><br><span class="line">const server &#x3D; http.createServer(app);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 让 WebSocket 服务在创建的 HTTP 服务器上监听</span><br><span class="line">websocket.listen(server, sessionMiddleware);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 启动 HTTP 服务</span><br><span class="line">server.listen(config.serverPort);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 输出服务器启动日志</span><br><span class="line">console.log(&#96;Server listening at http:&#x2F;&#x2F;127.0.0.1:$&#123;config.serverPort&#125;&#96;);</span><br></pre></td></tr></table></figure>
+<p>修改完成后，按 Ctrl + S 保存文件，并重启服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart app</span><br></pre></td></tr></table></figure>
+<h5 id="更新Nginx代理"><a href="#更新Nginx代理" class="headerlink" title="更新Nginx代理"></a>更新Nginx代理</h5><p>编辑 Nginx 配置 ssl.conf，添加 WebSocket 支持，可参考下面的配置(注：请将参考配置文件中的 <a href="http://www.example.com" target="_blank" rel="noopener">www.example.com</a> 替换为前面步骤申请的域名，将 1_<a href="http://www.example.com.crt" target="_blank" rel="noopener">www.example.com.crt</a> 和 2_<a href="http://www.example.com.key" target="_blank" rel="noopener">www.example.com.key</a> 替换为前面步骤申请并上传的 SSL 证书的名称)：</p>
+<figure class="highlight plain"><figcaption><span>WebSocket 配置</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade &#123;</span><br><span class="line">    default upgrade;</span><br><span class="line">    &#39;&#39;      close;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        server_name www.example.com; # 改为绑定证书的域名</span><br><span class="line">        # ssl 配置</span><br><span class="line">        ssl on;</span><br><span class="line">        ssl_certificate 1_www.example.com.crt; # 改为自己申请得到的 crt 文件的名称</span><br><span class="line">        ssl_certificate_key 2_www.example.com.key; # 改为自己申请得到的 key 文件的名称</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">        # WebSocket 配置</span><br><span class="line">        proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">        proxy_set_header Connection $connection_upgrade;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:8765;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>配置完成后，按 Ctrl + S 保存，并且通知 Nginx 进程重新加载配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<h5 id="测试Websocket"><a href="#测试Websocket" class="headerlink" title="测试Websocket"></a>测试Websocket</h5><p>打开配套的小程序，点击 实验三：WebSocket。进入测试页面后，点击 连接 按钮，如果出现连接成功的提示，表示 WebSocket 服务已经正常运行，可以收发消息。</p>
+<h4 id="剪刀石头布小游戏"><a href="#剪刀石头布小游戏" class="headerlink" title="剪刀石头布小游戏"></a>剪刀石头布小游戏</h4><h5 id="实现游戏房间的逻辑"><a href="#实现游戏房间的逻辑" class="headerlink" title="实现游戏房间的逻辑"></a>实现游戏房间的逻辑</h5><p>创建 /data/release/weapp/game 目录用于存放剪刀石头布小游戏的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;data&#x2F;release&#x2F;weapp&#x2F;game</span><br></pre></td></tr></table></figure>
+<p>添加 game/Room.js 实现游戏房间逻辑，可参考下面的代码：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">enum GameChoice &#123;</span><br><span class="line">    &#x2F;&#x2F; 剪刀</span><br><span class="line">    Scissors &#x3D; 1,</span><br><span class="line">    &#x2F;&#x2F; 石头</span><br><span class="line">    Rock &#x3D; 2,</span><br><span class="line">    &#x2F;&#x2F; 布</span><br><span class="line">    Paper &#x3D; 3</span><br><span class="line">&#125;</span><br><span class="line">*&#x2F;</span><br><span class="line">function judge(choice1, choice2) &#123;</span><br><span class="line">    &#x2F;&#x2F; 和局</span><br><span class="line">    if (choice1 &#x3D;&#x3D; choice2) return 0;</span><br><span class="line">    &#x2F;&#x2F; Player 1 没出，Player 2 胜出</span><br><span class="line">    if (!choice1) return 1;</span><br><span class="line">    &#x2F;&#x2F; Player 2 没出，Player 1 胜出</span><br><span class="line">    if (!choice2) return -1;</span><br><span class="line">    &#x2F;&#x2F; 都出了就这么算</span><br><span class="line">    return (choice1 - choice2 + 3) % 3 &#x3D;&#x3D; 1 ? -1 : 1;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;** @type &#123;Room[]&#125; *&#x2F;</span><br><span class="line">const globalRoomList &#x3D; [];</span><br><span class="line">&#x2F;&#x2F; 每个房间最多两人</span><br><span class="line">const MAX_ROOT_MEMBER &#x3D; 2;</span><br><span class="line">&#x2F;&#x2F; 游戏时间，单位秒</span><br><span class="line">const GAME_TIME &#x3D; 3;</span><br><span class="line">let nextRoomId &#x3D; 0;</span><br><span class="line">&#x2F;** 表示一个房间 *&#x2F;</span><br><span class="line">module.exports &#x3D; class Room &#123;</span><br><span class="line">    &#x2F;** 获取所有房间 *&#x2F;</span><br><span class="line">    static all() &#123;</span><br><span class="line">        return globalRoomList.slice();</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 获取有座位的房间 *&#x2F;</span><br><span class="line">    static findRoomWithSeat() &#123;</span><br><span class="line">        return globalRoomList.find(x &#x3D;&gt; !x.isFull());</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 创建新房间 *&#x2F;</span><br><span class="line">    static create() &#123;</span><br><span class="line">        const room &#x3D; new Room();</span><br><span class="line">        globalRoomList.unshift(room);</span><br><span class="line">        return room;</span><br><span class="line">    &#125;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        this.id &#x3D; &#96;room$&#123;nextRoomId++&#125;&#96;;</span><br><span class="line">        this.players &#x3D; [];</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 添加玩家 *&#x2F;</span><br><span class="line">    addPlayer(player) &#123;</span><br><span class="line">        const &#123; uid, uname &#125; &#x3D; player.user;</span><br><span class="line">        console.log(&#96;Player $&#123;uid&#125;($&#123;uname&#125;) enter $&#123;this.id&#125;&#96;);</span><br><span class="line">        this.players.push(player);</span><br><span class="line">        if (this.isFull()) &#123;</span><br><span class="line">            this.startGame();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 删除玩家 *&#x2F;</span><br><span class="line">    removePlayer(player) &#123;</span><br><span class="line">        const &#123; uid, uname &#125; &#x3D; player.user;</span><br><span class="line">        console.log(&#96;Player $&#123;uid&#125;($&#123;uname&#125;) leave $&#123;this.id&#125;&#96;);</span><br><span class="line">        const playerIndex &#x3D; this.players.indexOf(player);</span><br><span class="line">        if (playerIndex !&#x3D; -1) &#123;</span><br><span class="line">            this.players.splice(playerIndex, 1);</span><br><span class="line">        &#125;</span><br><span class="line">        if (this.players.length &#x3D;&#x3D;&#x3D; 0) &#123;</span><br><span class="line">            console.log(&#96;Room $&#123;this.id&#125; is empty now&#96;);</span><br><span class="line">            const roomIndex &#x3D; globalRoomList.indexOf(this);</span><br><span class="line">            if (roomIndex &gt; -1) &#123;</span><br><span class="line">                globalRoomList.splice(roomIndex, 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 玩家已满 *&#x2F;</span><br><span class="line">    isFull() &#123;</span><br><span class="line">        return this.players.length &#x3D;&#x3D; MAX_ROOT_MEMBER;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 开始游戏 *&#x2F;</span><br><span class="line">    startGame() &#123;</span><br><span class="line">        &#x2F;&#x2F; 保留这行日志输出可以让实验室检查到实验的完成情况</span><br><span class="line">        console.log(&#39;game started!&#39;);</span><br><span class="line">        &#x2F;&#x2F; 当局积分清零</span><br><span class="line">        this.players.forEach(player &#x3D;&gt; player.gameData.roundScore &#x3D; 0);</span><br><span class="line">        &#x2F;&#x2F; 集合玩家用户和游戏数据</span><br><span class="line">        const players &#x3D; this.players.map(player &#x3D;&gt; Object.assign(&#123;&#125;, player.user, player.gameData));</span><br><span class="line">        &#x2F;&#x2F; 通知所有玩家开始</span><br><span class="line">        for (let player of this.players) &#123;</span><br><span class="line">            player.send(&#39;start&#39;, &#123;</span><br><span class="line">                gameTime: GAME_TIME,</span><br><span class="line">                players</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 计时结束</span><br><span class="line">        setTimeout(() &#x3D;&gt; this.finishGame(), GAME_TIME * 1000);</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;** 结束游戏 *&#x2F;</span><br><span class="line">    finishGame() &#123;</span><br><span class="line">        const players &#x3D; this.players;</span><br><span class="line">        &#x2F;&#x2F; 两两对比算分</span><br><span class="line">        for (let i &#x3D; 0; i &lt; MAX_ROOT_MEMBER; i++) &#123;</span><br><span class="line">            let p1 &#x3D; players[i];</span><br><span class="line">            if (!p1) break;</span><br><span class="line">            for (let j &#x3D; i + 1; j &lt; MAX_ROOT_MEMBER; j++) &#123;</span><br><span class="line">                let p2 &#x3D; players[j];</span><br><span class="line">                const result &#x3D; judge(p1.gameData.choice, p2.gameData.choice);</span><br><span class="line">                p1.gameData.roundScore -&#x3D; result;</span><br><span class="line">                p2.gameData.roundScore +&#x3D; result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 计算连胜奖励</span><br><span class="line">        for (let player of players) &#123;</span><br><span class="line">            const gameData &#x3D; player.gameData;</span><br><span class="line">            &#x2F;&#x2F; 胜局积分</span><br><span class="line">            if (gameData.roundScore &gt; 0) &#123;</span><br><span class="line">                gameData.winStreak++;</span><br><span class="line">                gameData.roundScore *&#x3D; gameData.winStreak;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 败局清零</span><br><span class="line">            else if (gameData.roundScore &lt; 0) &#123;</span><br><span class="line">                gameData.roundScore &#x3D; 0;</span><br><span class="line">                gameData.winStreak &#x3D; 0;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 累积总分</span><br><span class="line">            gameData.totalScore +&#x3D; gameData.roundScore;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; 计算结果</span><br><span class="line">        const result &#x3D; players.map(player &#x3D;&gt; &#123;</span><br><span class="line">            const &#123; uid &#125; &#x3D; player.user;</span><br><span class="line">            const &#123; roundScore, totalScore, winStreak, choice &#125; &#x3D; player.gameData;</span><br><span class="line">            return &#123; uid, roundScore, totalScore, winStreak, choice &#125;;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#x2F;&#x2F; 通知所有玩家游戏结果</span><br><span class="line">        for (let player of players) &#123;</span><br><span class="line">            player.send(&#39;result&#39;, &#123; result &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="实现玩家逻辑"><a href="#实现玩家逻辑" class="headerlink" title="实现玩家逻辑"></a>实现玩家逻辑</h5><p>添加 game/Player.js 实现玩家逻辑，可参考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">const Room &#x3D; require(&quot;.&#x2F;Room&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 表示一个玩家，处理玩家的公共游戏逻辑，消息处理部分需要具体的玩家实现（请参考 ComputerPlayer 和 HumanPlayer）</span><br><span class="line"> *&#x2F;</span><br><span class="line">module.exports &#x3D; class Player &#123;</span><br><span class="line">    constructor(user) &#123;</span><br><span class="line">        this.id &#x3D; user.uid;</span><br><span class="line">        this.user &#x3D; user;</span><br><span class="line">        this.room &#x3D; null;</span><br><span class="line">        this.gameData &#x3D; &#123;</span><br><span class="line">            &#x2F;&#x2F; 当前的选择（剪刀&#x2F;石头&#x2F;布）</span><br><span class="line">            choice: null,</span><br><span class="line">            &#x2F;&#x2F; 局积分</span><br><span class="line">            roundScore: 0,</span><br><span class="line">            &#x2F;&#x2F; 总积分</span><br><span class="line">            totalScore: 0,</span><br><span class="line">            &#x2F;&#x2F; 连胜次数</span><br><span class="line">            winStreak: 0</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 上线当前玩家，并且异步返回给玩家分配的房间</span><br><span class="line">     *&#x2F;</span><br><span class="line">    online(room) &#123;</span><br><span class="line">        &#x2F;&#x2F; 处理玩家 &#39;join&#39; 消息</span><br><span class="line">        &#x2F;&#x2F; 为玩家寻找一个可用的房间，并且异步返回</span><br><span class="line">        this.receive(&#39;join&#39;, () &#x3D;&gt; &#123;</span><br><span class="line">            if (this.room) &#123;</span><br><span class="line">                this.room.removePlayer(this);</span><br><span class="line">            &#125;</span><br><span class="line">            room &#x3D; this.room &#x3D; room || Room.findRoomWithSeat() || Room.create();</span><br><span class="line">            room.addPlayer(this);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 处理玩家 &#39;choise&#39; 消息</span><br><span class="line">        &#x2F;&#x2F; 需要记录玩家当前的选择，并且通知到房间里的其它玩家</span><br><span class="line">        this.receive(&#39;choice&#39;, (&#123; choice &#125;) &#x3D;&gt; &#123;</span><br><span class="line">            this.gameData.choice &#x3D; choice;</span><br><span class="line">            this.broadcast(&#39;movement&#39;, &#123;</span><br><span class="line">                uid: this.user.uid,</span><br><span class="line">                movement: &quot;choice&quot;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 处理玩家 &#39;leave&#39; 消息</span><br><span class="line">        &#x2F;&#x2F; 让玩家下线</span><br><span class="line">        this.receive(&#39;leave&#39;, () &#x3D;&gt; this.offline);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 下线当前玩家，从房间离开</span><br><span class="line">     *&#x2F;</span><br><span class="line">    offline() &#123;</span><br><span class="line">        if (this.room) &#123;</span><br><span class="line">            this.room.removePlayer(this);</span><br><span class="line">            this.room &#x3D; null;</span><br><span class="line">        &#125;</span><br><span class="line">        this.user &#x3D; null;</span><br><span class="line">        this.gameData &#x3D; null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 发送指定消息给当前玩家，需要具体子类实现</span><br><span class="line">     * @abstract</span><br><span class="line">     * @param &#123;string&#125; message 消息类型</span><br><span class="line">     * @param &#123;*&#125; data 消息数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    send(message, data) &#123;</span><br><span class="line">        throw new Error(&#39;Not implement: AbstractPlayer.send()&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 处理玩家发送的消息，需要具体子类实现</span><br><span class="line">     * @abstract</span><br><span class="line">     * @param &#123;string&#125; message 消息类型</span><br><span class="line">     * @param &#123;Function&#125; handler</span><br><span class="line">     *&#x2F;</span><br><span class="line">    receive(message, handler) &#123;</span><br><span class="line">        throw new Error(&#39;Not implement: AbstractPlayer.receive()&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 给玩家所在房间里的其它玩家发送消息</span><br><span class="line">     * @param &#123;string&#125; message 消息类型</span><br><span class="line">     * @param &#123;any&#125; data 消息数据</span><br><span class="line">     *&#x2F;</span><br><span class="line">    broadcast(message, data) &#123;</span><br><span class="line">        if (!this.room) return;</span><br><span class="line">        this.others().forEach(neighbor &#x3D;&gt; neighbor.send(message, data));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 获得玩家所在房间里的其他玩家</span><br><span class="line">     *&#x2F;</span><br><span class="line">    others() &#123;</span><br><span class="line">        return this.room.players.filter(player &#x3D;&gt; player !&#x3D; this);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="实现电脑玩家"><a href="#实现电脑玩家" class="headerlink" title="实现电脑玩家"></a>实现电脑玩家</h5><p>在实现人类玩家之前，我们先来创建 ComputerPlayer.js 来实现电脑玩家</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">const EventEmitter &#x3D; require(&#39;events&#39;);</span><br><span class="line">const Player &#x3D; require(&#39;.&#x2F;Player&#39;);</span><br><span class="line"></span><br><span class="line">let nextComputerId &#x3D; 0;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 机器人玩家实现，使用 EventEmitter 接收和发送消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">module.exports &#x3D; class ComputerPlayer extends Player &#123;</span><br><span class="line">    constructor() &#123;</span><br><span class="line">        const computerId &#x3D; &#96;robot-$&#123;++nextComputerId&#125;&#96;;</span><br><span class="line">        super(&#123;</span><br><span class="line">            uid: computerId,</span><br><span class="line">            uname: computerId,</span><br><span class="line">            uavatar: &#39;http:&#x2F;&#x2F;www.scoutiegirl.com&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;06&#x2F;Blue-Robot.png&#39;</span><br><span class="line">        &#125;);</span><br><span class="line">        this.emitter &#x3D; new EventEmitter();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 模拟玩家行为</span><br><span class="line">     *&#x2F;</span><br><span class="line">    simulate() &#123;</span><br><span class="line">        this.receive(&#39;start&#39;, () &#x3D;&gt; this.play());</span><br><span class="line">        this.receive(&#39;result&#39;, () &#x3D;&gt; this.stop());</span><br><span class="line">        this.send(&#39;join&#39;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 游戏开始后，随机时间后随机选择</span><br><span class="line">     *&#x2F;</span><br><span class="line">    play() &#123;</span><br><span class="line">        this.playing &#x3D; true;</span><br><span class="line">        const randomTime &#x3D; () &#x3D;&gt; Math.floor(100 + Math.random() * 2000);</span><br><span class="line">        const randomChoice &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">            if (!this.playing) return;</span><br><span class="line">            this.send(&quot;choice&quot;, &#123;</span><br><span class="line">                choice: Math.floor(Math.random() * 10000) % 3 + 1</span><br><span class="line">            &#125;);</span><br><span class="line">            setTimeout(randomChoice, randomTime());</span><br><span class="line">        &#125;</span><br><span class="line">        setTimeout(randomChoice, 10);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 游戏结束后，标记起来，阻止继续随机选择</span><br><span class="line">     *&#x2F;</span><br><span class="line">    stop() &#123;</span><br><span class="line">        this.playing &#x3D; false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 发送消息给当前玩家，直接转发到 emitter</span><br><span class="line">     *&#x2F;</span><br><span class="line">    send(message, data) &#123;</span><br><span class="line">        this.emitter.emit(message, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 从当前的 emitter 处理消息</span><br><span class="line">     *&#x2F;</span><br><span class="line">    receive(message, handle) &#123;</span><br><span class="line">        this.emitter.on(message, handle);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="实现人类玩家"><a href="#实现人类玩家" class="headerlink" title="实现人类玩家"></a>实现人类玩家</h5><p>人类玩家通过 WebSocket 信道来实现玩家的输入输出，我们需要添加 game/Tunnel.js 和 game/HumanPlayer.js 来实现人类玩家逻辑，可参考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">const EventEmitter &#x3D; require(&#39;events&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 封装 WebSocket 信道</span><br><span class="line"> *&#x2F;</span><br><span class="line">module.exports &#x3D; class Tunnel &#123;</span><br><span class="line">    constructor(ws) &#123;</span><br><span class="line">        this.emitter &#x3D; new EventEmitter();</span><br><span class="line">        this.ws &#x3D; ws;</span><br><span class="line">        ws.on(&#39;message&#39;, packet &#x3D;&gt; &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                &#x2F;&#x2F; 约定每个数据包格式：&#123; message: &#39;type&#39;, data: any &#125;</span><br><span class="line">                const &#123; message, data &#125; &#x3D; JSON.parse(packet);</span><br><span class="line">                this.emitter.emit(message, data);</span><br><span class="line">            &#125; catch (err) &#123;</span><br><span class="line">                console.log(&#39;unknown packet: &#39; + packet);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    on(message, handle) &#123;</span><br><span class="line">        this.emitter.on(message, handle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    emit(message, data) &#123;</span><br><span class="line">        this.ws.send(JSON.stringify(&#123; message, data &#125;));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">const co &#x3D; require(&#39;co&#39;);</span><br><span class="line">const Player &#x3D; require(&#39;.&#x2F;Player&#39;);</span><br><span class="line">const ComputerPlayer &#x3D; require(&#39;.&#x2F;ComputerPlayer&#39;);</span><br><span class="line">const Tunnel &#x3D; require(&#39;.&#x2F;Tunnel&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 人类玩家实现，通过 WebSocket 信道接收和发送消息</span><br><span class="line"> *&#x2F;</span><br><span class="line">module.exports &#x3D; class HumanPlayer extends Player &#123;</span><br><span class="line">    constructor(user, ws) &#123;</span><br><span class="line">        super(user);</span><br><span class="line">        this.ws &#x3D; ws;</span><br><span class="line">        this.tunnel &#x3D; new Tunnel(ws);</span><br><span class="line">        this.send(&#39;id&#39;, user);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 人类玩家上线后，还需要监听信道关闭，让玩家下线</span><br><span class="line">     *&#x2F;</span><br><span class="line">    online(room) &#123;</span><br><span class="line">        super.online(room);</span><br><span class="line">        this.ws.on(&#39;close&#39;, () &#x3D;&gt; this.offline());</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 人类玩家请求电脑玩家</span><br><span class="line">        this.receive(&#39;requestComputer&#39;, () &#x3D;&gt; &#123;</span><br><span class="line">            const room &#x3D; this.room;</span><br><span class="line">            while(room &amp;&amp; !room.isFull()) &#123;</span><br><span class="line">                const computer &#x3D; new ComputerPlayer();</span><br><span class="line">                computer.online(room);</span><br><span class="line">                computer.simulate();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 下线后关闭信道</span><br><span class="line">     *&#x2F;</span><br><span class="line">    offline() &#123;</span><br><span class="line">        super.offline();</span><br><span class="line">        if (this.ws &amp;&amp; this.ws.readyState &#x3D;&#x3D; this.ws.OPEN) &#123;</span><br><span class="line">            this.ws.close();</span><br><span class="line">        &#125;</span><br><span class="line">        this.ws &#x3D; null;</span><br><span class="line">        this.tunnel &#x3D; null;</span><br><span class="line">        if (this.room) &#123;</span><br><span class="line">            &#x2F;&#x2F; 清理房间里面的电脑玩家</span><br><span class="line">            for (let player of this.room.players) &#123;</span><br><span class="line">                if (player instanceof ComputerPlayer) &#123;</span><br><span class="line">                    this.room.removePlayer(player);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            this.room &#x3D; null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 通过 WebSocket 信道发送消息给玩家</span><br><span class="line">     *&#x2F;</span><br><span class="line">    send(message, data) &#123;</span><br><span class="line">        this.tunnel.emit(message, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 从 WebSocket 信道接收玩家的消息</span><br><span class="line">     *&#x2F;</span><br><span class="line">    receive(message, callback) &#123;</span><br><span class="line">        this.tunnel.on(message, callback);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="添加游戏服务入口"><a href="#添加游戏服务入口" class="headerlink" title="添加游戏服务入口"></a>添加游戏服务入口</h5><p>游戏的实现已经完成了，接下来，编辑 websocket.js 添加服务入口，可参考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 引入 url 模块用于解析 URL</span><br><span class="line">const url &#x3D; require(&#39;url&#39;);</span><br><span class="line">&#x2F;&#x2F; 引入 ws 支持 WebSocket 的实现</span><br><span class="line">const ws &#x3D; require(&#39;ws&#39;);</span><br><span class="line">&#x2F;&#x2F; 引入人类玩家</span><br><span class="line">const HumanPlayer &#x3D; require(&#39;.&#x2F;game&#x2F;HumanPlayer&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 导出处理方法</span><br><span class="line">exports.listen &#x3D; listen;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 在 HTTP Server 上处理 WebSocket 请求</span><br><span class="line"> * @param &#123;http.Server&#125; server</span><br><span class="line"> * @param &#123;wafer.SessionMiddleware&#125; sessionMiddleware</span><br><span class="line"> *&#x2F;</span><br><span class="line">function listen(server, sessionMiddleware) &#123;</span><br><span class="line">    &#x2F;&#x2F; 使用 HTTP Server 创建 WebSocket 服务，使用 path 参数指定需要升级为 WebSocket 的路径</span><br><span class="line">    const wss &#x3D; new ws.Server(&#123; server &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 同时支持 &#x2F;ws 和 &#x2F;game 的 WebSocket 连接请求 </span><br><span class="line">    wss.shouldHandle &#x3D; (request) &#x3D;&gt; &#123; </span><br><span class="line">        const path &#x3D; url.parse(request.url).pathname; </span><br><span class="line">        request.path &#x3D; path; </span><br><span class="line">        return [&#39;&#x2F;ws&#39;, &#39;&#x2F;game&#39;].indexOf(path) &gt; -1; </span><br><span class="line">    &#125;; </span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听 WebSocket 连接建立</span><br><span class="line">    wss.on(&#39;connection&#39;, (ws, request) &#x3D;&gt; &#123;</span><br><span class="line">        &#x2F;&#x2F; request: 要升级到 WebSocket 协议的 HTTP 连接</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 被升级到 WebSocket 的请求不会被 express 处理，</span><br><span class="line">        &#x2F;&#x2F; 需要使用会话中间节获取会话</span><br><span class="line">        sessionMiddleware(request, null, () &#x3D;&gt; &#123;</span><br><span class="line">            const session &#x3D; request.session;</span><br><span class="line">            if (!session) &#123;</span><br><span class="line">                &#x2F;&#x2F; 没有获取到会话，强制断开 WebSocket 连接</span><br><span class="line">                ws.send(JSON.stringify(request.sessionError) || &quot;No session avaliable&quot;);</span><br><span class="line">                ws.close();</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            console.log(&#96;WebSocket client connected with openId&#x3D;$&#123;session.userInfo.openId&#125;&#96;);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 根据请求的地址进行不同处理 </span><br><span class="line">            switch (request.path) &#123; </span><br><span class="line">                case &#39;&#x2F;ws&#39;: return serveMessage(ws, session.userInfo); </span><br><span class="line">                case &#39;&#x2F;game&#39;: return serveGame(ws, session.userInfo); </span><br><span class="line">                default: return ws.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听 WebSocket 服务的错误</span><br><span class="line">    wss.on(&#39;error&#39;, (err) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(err);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 进行简单的 WebSocket 服务，对于客户端发来的所有消息都回复回去</span><br><span class="line"> *&#x2F;</span><br><span class="line">function serveMessage(ws, userInfo) &#123;</span><br><span class="line">    &#x2F;&#x2F; 监听客户端发来的消息</span><br><span class="line">    ws.on(&#39;message&#39;, (message) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(&#96;WebSocket received: $&#123;message&#125;&#96;);</span><br><span class="line">        ws.send(&#96;Server: Received($&#123;message&#125;)&#96;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 监听关闭事件</span><br><span class="line">    ws.on(&#39;close&#39;, (code, message) &#x3D;&gt; &#123;</span><br><span class="line">        console.log(&#96;WebSocket client closed (code: $&#123;code&#125;, message: $&#123;message || &#39;none&#39;&#125;)&#96;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 连接后马上发送 hello 消息给会话对应的用户</span><br><span class="line">    ws.send(&#96;Server: 恭喜，$&#123;userInfo.nickName&#125;&#96;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 使用 WebSocket 进行游戏服务</span><br><span class="line"> *&#x2F;</span><br><span class="line">function serveGame(ws, userInfo) &#123;</span><br><span class="line">    const user &#x3D; &#123; </span><br><span class="line">        uid: userInfo.openId, </span><br><span class="line">        uname: userInfo.nickName, </span><br><span class="line">        uavatar: userInfo.avatarUrl </span><br><span class="line">    &#125;; </span><br><span class="line">    &#x2F;&#x2F; 创建玩家 </span><br><span class="line">    const player &#x3D; new HumanPlayer(user, ws); </span><br><span class="line">    &#x2F;&#x2F; 玩家上线</span><br><span class="line">    player.online();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装co模块"><a href="#安装co模块" class="headerlink" title="安装co模块"></a>安装co模块</h5><p>我们的源码中使用到了 co 进行协程管理，启动游戏服务前，需要先安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;release&#x2F;weapp</span><br><span class="line">npm install co --save</span><br></pre></td></tr></table></figure>
+<h5 id="测试游戏模块"><a href="#测试游戏模块" class="headerlink" title="测试游戏模块"></a>测试游戏模块</h5><p>重启 Node 服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart app</span><br></pre></td></tr></table></figure>
+<p>打开配套的小程序，点击 实验四 - 剪刀石头布小游戏，点击 开始 按钮进行游戏。</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/06/01/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%90%AD%E5%BB%BA/" data-id="ck4y8kz2h0013qgnr0lqd1r13"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">微信小程序</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-浏览器跨域获取资源的方式" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/05/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90%E7%9A%84%E6%96%B9%E5%BC%8F/"
+    >浏览器跨域获取资源的方式</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/05/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90%E7%9A%84%E6%96%B9%E5%BC%8F/" class="article-date">
+  <time datetime="2019-05-24T06:24:05.000Z" itemprop="datePublished">2019-05-24</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><p>CORS(Corss-Origin Resource sharing,跨资源共享)。其基本的思想是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或者响应的成功或失败。即给请求附加一个额外的Origin头部，其中包含请求页面的源信息（协议，域名，端口），以便服务器根据这个头部决定是否给予反应。</p>
+<h4 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h4><p>将页面的document.domain设置为相同的值，页面可以互相访问对方的Javascript对象。</p>
+<p>注意：<br>不能将值设置为URL中不包含的域；<br>松散的域名不能再设置为紧绷的域名。</p>
+<h4 id="图像Ping"><a href="#图像Ping" class="headerlink" title="图像Ping"></a>图像Ping</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var img&#x3D;new Image();</span><br><span class="line">img.onload&#x3D;img.onerror&#x3D;function()&#123;</span><br><span class="line">	img.onload&#x3D;img.onerror&#x3D;function()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img.src&#x3D;&quot;url?name&#x3D;value&quot;</span><br></pre></td></tr></table></figure>
+<p>请求数据通过查询字符串的形式发送，响应可以是任意的内容，通常是像素图或204响应。图像Ping最常用于跟踪用户点击页面或动态广告曝光的次数。<br>缺点：<br>只能发送GET请求；<br>无法访问服务器的响应文本，只能适用于浏览器与服务器的单向通信。</p>
+<h4 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var script &#x3D;document.createElement(&#39;script&#39;);</span><br><span class="line">script.src&#x3D;&quot;url?callback&#x3D;handleResponse&quot;;</span><br><span class="line">document.body.insertBefore(script,document.body.firstChild);</span><br></pre></td></tr></table></figure>
+<p>JSONP由两部分组成：回调函数和数据</p>
+<p>回调函数是接收响应时应该在页面中调用的函数，其名字一般时在请求中指定。<br>数据是传入回调函数中的JSON数据。</p>
+<p>优点：<br>能够直接访问响应文本，可用于浏览器与服务器间的双向通信。</p>
+<p>缺点：<br>JSON从其他域中加载代码执行，其他域可能不安全；<br>难以确定JSONP请求是否失败。</p>
+<h4 id="Comet"><a href="#Comet" class="headerlink" title="Comet"></a>Comet</h4><p>Comet可以实现服务器向浏览器推送数据。<br>Comet是实现方式：长轮询和流<br>短轮询即浏览器定时向服务器发送请求，看看数据有没有更新<br>长轮询即浏览器向服务器发送一个请求，服务器一直保持连接打开，直到有数据可发送，发送完数据之后，浏览器关闭，随即又向服务器发送一个新请求。其优点是所有的浏览器都支持，使用XHR对象和setTimeout()即可实现。<br>流即浏览器向服务器发送一个请求，服务器移植保持连接打开，然后周期性的向浏览器发送数据，页面的整个生命周期内只使用一个HTTP连接。</p>
+<h4 id="Websocket"><a href="#Websocket" class="headerlink" title="Websocket"></a>Websocket</h4><p>websocket可在一个单独的持久连接上提供全双工，双向通信。<br>WebSocket使用自定义协议，未加密的连接时ws://；加密的链接是wss://。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var webSocket&#x3D;new WebSocket(&#39;ws:&#x2F;&#x2F;&#39;);</span><br><span class="line">websocket.send(message);</span><br><span class="line">webSocket.onmessage&#x3D;function()&#123;</span><br><span class="line">	var data&#x3D;event.data;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<p>必须给WebSocket的构造函数传入绝对URL；<br> WebSocket可以打开任何站点的连接，是否与某个域中的页面通信，完全取决于服务器；<br> WebSocket只能发送纯文本数据，对于复杂的数据结构，在发送之前必须进行序列化JSONP.string(message)</p>
+<p>优点：<br>在客户端和服务器之间发送非常少的数据，减少字节开销。s</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/05/24/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90%E7%9A%84%E6%96%B9%E5%BC%8F/" data-id="ck4y8kz19000hqgnrgwnv6whl"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-Javascript之继承" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/05/23/Javascript%E4%B9%8B%E7%BB%A7%E6%89%BF/"
+    >Javascript之继承</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/05/23/Javascript%E4%B9%8B%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time datetime="2019-05-23T07:13:39.000Z" itemprop="datePublished">2019-05-23</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><blockquote>
+<p>继承是OO语言中一个重要的概念。许多的语言都支持两种继承方式：接口继承和实现继承。接口继承只继承方法签名，而实现继承则只继承实际的方法。由于函数没有签名，在ECMA Script中无法实现接口继承，只支持实现继承，而实现继承主要是依靠原型链来实现。</p>
+</blockquote>
+<h4 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">   this.property&#x3D;true;</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype&#x3D;&#123;</span><br><span class="line">	getSup:function()&#123;</span><br><span class="line">		renturn  this.property;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Sub()&#123;</span><br><span class="line">	this.subproperty&#x3D;flase;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;继承Sup</span><br><span class="line">Sub.protype&#x3D;new sup();</span><br><span class="line"></span><br><span class="line">var instance&#x3D;new Sub();</span><br><span class="line">alert(instance.getSup());  &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+
+<p><em>确定原型和实例等关系</em></p>
+<blockquote>
+<p>可以通过两种方式确定原型和实例之间的关系。第一种是使用instanceof操作符，第二种是使用isPrototypeOf()方法。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(instance instanceof Object);&#x2F;&#x2F;true</span><br><span class="line"></span><br><span class="line">alert(Object.prototype.isPrototypeOf(instance));  &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+<p><em>注意:</em></p>
+<blockquote>
+<ol>
+<li>给原型添加方法的代码一定要放在替换原型的语句之后</li>
+<li>通过原型链实现继承时，不能使用字面量创建原型方法，因为这样会重写原型链。</li>
+</ol>
+</blockquote>
+<p><em>原型链存在的问题</em></p>
+<blockquote>
+<ol>
+<li>包含引用类型值的原型属性会被所有的实例共享</li>
+<li>在创建子类型的实例时，不能向超类型的构造函数中传递参数</li>
+</ol>
+</blockquote>
+<h4 id="借用构造函数"><a href="#借用构造函数" class="headerlink" title="借用构造函数"></a>借用构造函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function Sup(colcors)&#123;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Sub()&#123;</span><br><span class="line">	&#x2F;&#x2F;继承了Sup</span><br><span class="line">	Sup.call(this); &#x2F;&#x2F;借调超类型的构造函数</span><br><span class="line">&#125;</span><br><span class="line">var instance1&#x3D;new Sub();</span><br><span class="line">instance1.colors.push(&#39;black&#39;);</span><br><span class="line">alert(instance1.colors);  &#x2F;&#x2F;red blue green balck</span><br><span class="line"></span><br><span class="line">var instance2&#x3D;new Sub();</span><br><span class="line">alert(instance2.colors);  &#x2F;&#x2F;red blue grenn</span><br></pre></td></tr></table></figure>
+<p>相对于原型链而言，借用构造函数又一个比较大的优势，可以在子构造函数中向超类型构造函数传递参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function Sup(colcors)&#123;</span><br><span class="line">	this.colors&#x3D;colors;</span><br><span class="line">&#125;</span><br><span class="line">function Sub()&#123;</span><br><span class="line">	&#x2F;&#x2F;继承了Sup，同时传参</span><br><span class="line">	Sup.call(this,yellow); </span><br><span class="line">	this.number&#x3D;12;</span><br><span class="line">&#125;</span><br><span class="line">var instance &#x3D;new Sub();</span><br><span class="line">alert(instance.colors); &#x2F;&#x2F;yellow</span><br><span class="line">alret(instance.number); &#x2F;&#x2F;12</span><br></pre></td></tr></table></figure>
+<p><em>借用构造函数存在的问题：</em></p>
+<blockquote>
+<p>方法都在构造函数中定义，函数的复用无从谈起。而且在超类型的原型中定义的方法，对子类型而言也是不可见的。</p>
+</blockquote>
+<h4 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h4><blockquote>
+<p>也称为伪经典继承，将原型链和借用构造函数的技术组合在一起。<em>其背后的思路是使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">	this.name&#x3D;name;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype.sayName&#x3D;function()&#123;</span><br><span class="line">	alert(this.name);</span><br><span class="line">&#125;;</span><br><span class="line">function Sub(name.age)&#123;</span><br><span class="line">	Sup.call(this,name);</span><br><span class="line">	this.age&#x3D;age;</span><br><span class="line">&#125;</span><br><span class="line">Sub.prototype&#x3D;new Sup();</span><br><span class="line">&#x2F;&#x2F;定义新的方法要在继承之后</span><br><span class="line">Sub.prototype.sayAge&#x3D;function()&#123;</span><br><span class="line">	alert(this.age);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var instance1&#x3D;new Sub(&quot;jack&quot;,21);</span><br><span class="line">instance1.colors.push(&#39;black&#39;);</span><br><span class="line">alert(instance.colors);&#x2F;&#x2F;red blue green black</span><br><span class="line">instance1.sayName();&#x2F;&#x2F;jack</span><br><span class="line">instance1.sayAge();&#x2F;&#x2F;21</span><br><span class="line"></span><br><span class="line">var instance2&#x3D;new sub(&quot;mark&quot;,24);</span><br><span class="line">alert(instance.colors);&#x2F;&#x2F;red blue green </span><br><span class="line">instance1.sayName();&#x2F;&#x2F;mark</span><br><span class="line">instance1.sayAge();&#x2F;&#x2F;27</span><br></pre></td></tr></table></figure>
+<p><em>缺点:</em></p>
+<blockquote>
+<p>无论什么情况下，都会调用两次超类型构造函数，一次是在创建子类型原型的时候，另一次是在子类型构造函数的内部。</p>
+</blockquote>
+<h4 id="原型式继承"><a href="#原型式继承" class="headerlink" title="原型式继承"></a>原型式继承</h4><p>Object函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function object(o)&#123;</span><br><span class="line">	function F()&#123;&#125;</span><br><span class="line">	F.prototype&#x3D;o;</span><br><span class="line">	return new F();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var person&#x3D;&#123;</span><br><span class="line">  name:&#39;lisi&#39;,</span><br><span class="line">  friends:[&#39;mark&#39;,&#39;van&#39;]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var anotherPerson&#x3D;object.create(person);</span><br><span class="line">anotherPerson.name&#x3D;&#39;grey&#39;;</span><br><span class="line">anotherPerson.friends.push(&#39;rob&#39;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var yetPerson&#x3D;object.create(person);</span><br><span class="line">yetPerson.name&#x3D;&#39;linda&#39;;</span><br><span class="line">yetPerson.friends.push(&#39;barbie&#39;);</span><br><span class="line"></span><br><span class="line">alert(person.friends);&#x2F;&#x2F; mark van rob barbie</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ECMAScript5通过新增Object.create（）方法规范化了原型式继承。这个方法接收两个参数：一个用作新对象和（可选的）一个新对象定义额外属性的对象。在传入一个参数的情况下，object.create()与object()方法的行为相同。<br><em>例如:</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var person&#x3D;&#123;</span><br><span class="line">	name:&#39;Jack&#39;,</span><br><span class="line">	friends:[&#39;Shelby&#39;,&#39;Court&#39;,&#39;Van&#39;]</span><br><span class="line">&#125;;</span><br><span class="line">var anotherPerson&#x3D;object.create(pperson,&#123;</span><br><span class="line">	name:&#123;</span><br><span class="line">		value:&#39;Greg&#39;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function createAnother(original)&#123;</span><br><span class="line">	var clone &#x3D;object(original); &#x2F;&#x2F;通过调用函数创建一个新的对象</span><br><span class="line">	clone.sayHi&#x3D;function()&#123;</span><br><span class="line">		alert(&#39;hi&#39;);</span><br><span class="line">	&#125;;  &#x2F;&#x2F;以某种方式来增强这个对象</span><br><span class="line">	return clone; &#x2F;&#x2F;返回这个对象</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person&#x3D;&#123;</span><br><span class="line">	name:&quot;Nicholas&quot;,</span><br><span class="line">	friends:[&quot;Shelby&quot;,&quot;Court&quot;,&quot;Van&quot;]</span><br><span class="line">&#125;;</span><br><span class="line">var anotherPerson&#x3D;createAnother(person);</span><br><span class="line">anotherPerson.sayHi();&#x2F;&#x2F;&quot;hi&quot;</span><br></pre></td></tr></table></figure>
+<p><em>优点:</em><br>新对象不仅具有person的所有的属性和方法，而且还有自己的sayHi()方法。</p>
+<p><em>缺点:</em><br>使用寄生式继承来为对象添加函数，会犹豫不能做到哈叔复用而降低效率，这一点域构造函数模式类似。</p>
+<h4 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h4><blockquote>
+<p>通过借用构造函数来继承属性，通过原型链的混成形式来继承方法。其背后的基本思路是：不必为了指定子类型的原型而调用超类型的构造函数，我们所需的无非就是超类型原型的一个副本而已。本质上使用寄生式继承来继承超类型的原型，然后将结果指定给子类型的原型。<br><em>寄生组合继承的基本模式如下所示:</em></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function inheritPrototype(sub,sup)&#123;</span><br><span class="line">	var prototype&#x3D;object(sup.prototype); &#x2F;&#x2F;创建对象</span><br><span class="line">	prototype.constructor&#x3D;sub; &#x2F;&#x2F;增强对象</span><br><span class="line">	sub.prototype&#x3D;prototype;  &#x2F;&#x2F;指定对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>相当于封装了一个inheriPrototype函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function Sup()&#123;</span><br><span class="line">	this.name&#x3D;name;</span><br><span class="line">	this.colors&#x3D;[&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;];</span><br><span class="line">&#125;</span><br><span class="line">Sup.prototype.sayName&#x3D;function()&#123;</span><br><span class="line">	alert(this.name);</span><br><span class="line">&#125;;</span><br><span class="line">function Sub(name.age)&#123;</span><br><span class="line">	Sup.call(this,name);</span><br><span class="line">	this.age&#x3D;age;</span><br><span class="line">&#125;</span><br><span class="line">inheritPrototype(SubType,SuperType);</span><br><span class="line">&#x2F;&#x2F;定义新的方法要在继承之后</span><br><span class="line">Sub.prototype.sayAge&#x3D;function()&#123;</span><br><span class="line">	alert(this.age);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>如图所示：<br><img src="http://ww2.sinaimg.cn/large/006tNc79ly1g3duwygdd2j30w40tg79y.jpg" alt=""></p>
+<blockquote>
+<p>这个例子的高效性体现于它只调用一次SuperType构造函数，并且因此避免了在subtype.prototype 上面创建不必要的，多余的属性。与此同时原型链还能够保持不变，因此还能够正常使用instanceof和isPrototyepOf()。开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。</p>
+</blockquote>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/05/23/Javascript%E4%B9%8B%E7%BB%A7%E6%89%BF/" data-id="ck4y8kz0y0006qgnr3gx33mci"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-务虚的十年" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/04/13/%E5%8A%A1%E8%99%9A%E7%9A%84%E5%8D%81%E5%B9%B4/"
+    >务虚的十年</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/04/13/%E5%8A%A1%E8%99%9A%E7%9A%84%E5%8D%81%E5%B9%B4/" class="article-date">
+  <time datetime="2019-04-13T08:49:20.000Z" itemprop="datePublished">2019-04-13</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>总的来看，下一代青年不太可能像上一代有那么多机会。经济增长已经开始放缓，还将继续放缓；人口增长高峰已经过去；除了高科技，几乎所有行业都不会有以前那么高的增长率。现在是穷人，未来极大可能还是穷人，能翻身的只能是少数，而且难度越来越大。</p>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/04/13/%E5%8A%A1%E8%99%9A%E7%9A%84%E5%8D%81%E5%B9%B4/" data-id="ck4y8kz17000eqgnr25wpgcvs"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E6%83%B3%E7%AC%94%E8%AE%B0/" rel="tag">随想笔记</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-git指令学习" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/04/13/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/"
+    >git指令学习</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/04/13/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2019-04-13T07:17:07.000Z" itemprop="datePublished">2019-04-13</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h5 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir learngit</span><br><span class="line">git init  &#x2F;&#x2F;把目录变成可以管理的仓库</span><br></pre></td></tr></table></figure>
+<h5 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add readme.txt XXX.txt  &#x2F;&#x2F;文件添加到仓库 k可以添加多个文件</span><br><span class="line">git commit -m &quot;illustrate&quot;   &#x2F;&#x2F;把文件提交</span><br></pre></td></tr></table></figure>
+<h5 id="查看命令结果"><a href="#查看命令结果" class="headerlink" title="查看命令结果"></a>查看命令结果</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git status &#x2F;&#x2F;了解什么文件修改</span><br><span class="line">git diff  &#x2F;&#x2F; 修改的具体的内容</span><br></pre></td></tr></table></figure>
+<h5 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git log  or git log --pretty&#x3D;online &#x2F;&#x2F;查看历史版本</span><br><span class="line">git reset --hard HEAD^ &#x2F;&#x2F;回退到上一个的版本</span><br><span class="line">git reset --hard 版本号（前几位） &#x2F;&#x2F;回退到之前任意的版本号</span><br><span class="line">git reflog  &#x2F;&#x2F;查询之前记录的每一次的命令，返回未来。</span><br></pre></td></tr></table></figure>
+<h5 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h5><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1g212a0t0crj30sg0ea43i.jpg" alt=""><br>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。<br>把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+<p>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<h5 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout  --xxx.txt &#x2F;&#x2F;丢弃工作区的修改</span><br></pre></td></tr></table></figure>
+<p>这里有两种情况：</p>
+<p>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
+<p>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD readme.txt &#x2F;&#x2F;把暂存区的修改撤销掉</span><br></pre></td></tr></table></figure>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+<h5 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm xx.txt</span><br><span class="line">git commit -m &quot;remove test.txt&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;误操作删除，恢复文件</span><br><span class="line">git checkout -- test.txt</span><br></pre></td></tr></table></figure>
+<h5 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:name&#x2F;xxx.git &#x2F;&#x2F;关联仓库。请千万注意，把上面的name替换成你自己的GitHub账户名.</span><br><span class="line">git push -u origin master &#x2F;&#x2F;推送到远程库中</span><br></pre></td></tr></table></figure>
+<p>之后，只要在本地做了提交，就可以通过命令<br>git push origin master 把本地master分枝多最新需钙推送到GitHub。</p>
+<h5 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a>克隆远程仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:name&#x2F;xxx.git</span><br></pre></td></tr></table></figure>
+<p>GitHub给出的地址不止一个，还可以用<a href="https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。" target="_blank" rel="noopener">https://github.com/michaelliao/gitskills.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。</a></p>
+<p>使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/04/13/git%E6%8C%87%E4%BB%A4%E5%AD%A6%E4%B9%A0/" data-id="ck4y8kz12000aqgnr3zxaf54e"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-javascript运行机制" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/"
+    >JavaScript执行机制</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" class="article-date">
+  <time datetime="2019-03-20T06:21:35.000Z" itemprop="datePublished">2019-03-20</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p><img src="1.png" alt=""></p>
+<h4 id="1-关于javascript"><a href="#1-关于javascript" class="headerlink" title="1 关于javascript"></a>1 关于javascript</h4><p>javascript是一门单线程语言，在最新的HTML5中提出了Web-Worker，但javascript是单线程这一核心仍未改变。所以一切javascript版的“多线程”都是用单线程模拟出来的，一切的javascript多线程都是纸老虎！</p>
+<h4 id="2-javascript事件循环"><a href="#2-javascript事件循环" class="headerlink" title="2 javascript事件循环"></a>2 javascript事件循环</h4><p> 既然是JS是单线程，那就像只有一个窗口的银行，客户需要排队一个一个办理业务，同理js任务也是需要一个一个的顺序执行。如果一个任务耗时过长，那么后一个任务必须等着。那么问题随之而来。如果我们在浏览新闻的时候，新闻包含文字和图片，图片很大，难道我们需要一直等待图片完全显示吗？因此聪明的程序员将任务分为两类：<br> ·同步任务<br> ·异步任务<br>当我们打开网站时，网页的渲染过程就是一堆同步任务，比如说页面的骨架和页面元素的渲染。而像加载图片音乐之类占用资源耗时久的任务，就是异步任务。我们使用导图来说明：<br><img src="2.png" alt=""><br>导图表达的内容用文字来表述的话：<br>·同步和异步任务分别进入不同的执行“场所”，同步的进入主线程，异步的进入Event Table并注册函数。<br>·当指定的事情完成时，Event Table 会将这个函数移入Event Queue。<br>·主线程内的任务执行完毕为空，会去Event Queue读取对应的函数，进入主线程执行。<br>·上述过程会不断的重复，也就是常说的Event Loop（事件循环）。<br>那么有一个疑问，我们何时知道主线程执行栈为空？JS引擎存在monitoring process进程，会持续不断的检查主线程栈是否为空，一旦为空，就会去Event Queue那里检查是否有等待被调用的函数。<br>我们来看一下具体的代码：<br>let data=[];<br>$.ajax({</p>
+<p>url:<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>,<br>data:data,<br>success:()=&gt;{</p>
+<pre><code>console.log(&apos;发送成功！&apos;);</code></pre><p>}</p>
+<p>})<br>console.log(‘代码执行结束’);<br>上面的是一段简易的ajax请求代码：<br>·ajax进入Event Table ，注册回调函数success。<br>·执行console.log（‘代码执行结束’）。<br>·ajax事件完成，回调success 进入Event Queue。<br>·主线程从Event Queue读取回调函数success并执行。</p>
+<h4 id="3-又爱又恨的setTimeout"><a href="#3-又爱又恨的setTimeout" class="headerlink" title="3.又爱又恨的setTimeout"></a>3.又爱又恨的setTimeout</h4><p>大名鼎鼎的setTimeout无需再多言，大家对他的第一印象就是异步可以延时执行，我们经常这么实现延时3秒执行：<br>setTimeout(() =&gt; {<br>    console.log(‘延时3秒’);<br>},3000)</p>
+<p>渐渐的setTimeout用的地方多了，问题也出现了，有时候明明写的延时3秒，实际却5，6秒才执行函数，这又咋回事啊？<br>先看一个例子：<br>setTimeout(() =&gt; {<br>    task();<br>},3000)<br>console.log(‘执行console’);</p>
+<p>根据前面我们的结论，setTimeout是异步的，应该先执行console.log这个同步任务，所以我们的结论是：<br>//执行console<br>//task()去验证一下，结果正确！然后我们修改一下前面的代码：<br>setTimeout(() =&gt; {<br>    task()<br>},3000)</p>
+<p>sleep(10000000)</p>
+<p>乍一看其实差不多嘛，但我们把这段代码在chrome执行一下，却发现控制台执行task()需要的时间远远超过3秒，说好的延时三秒，为啥现在需要这么长时间啊？<br>这时候我们需要重新理解setTimeout的定义。我们先说上述代码是怎么执行的：</p>
+<p>·task()进入Event Table并注册,计时开始。<br>·执行sleep函数，很慢，非常慢，计时仍在继续。<br>·3秒到了，计时事件timeout完成，task()进入Event Queue，但是sleep也太慢了吧，还没执行完，只好等着。<br>·sleep终于执行完了，task()终于从Event Queue进入了主线程执行。</p>
+<p>上述的流程走完，我们知道setTimeout这个函数，是经过指定时间后，把要执行的任务(本例中为task())加入到Event Queue中，又因为是单线程任务要一个一个执行，如果前面的任务需要的时间太久，那么只能等着，导致真正的延迟时间远远大于3秒。<br>我们还经常遇到setTimeout(fn,0)这样的代码，0秒后执行又是什么意思呢？是不是可以立即执行呢？<br>答案是不会的，setTimeout(fn,0)的含义是，指定某个任务在主线程最早可得的空闲时间执行，意思就是不用再等多少秒了，只要主线程执行栈内的同步任务全部执行完成，栈为空就马上执行。举例说明：<br>//代码1<br>console.log(‘先执行这里’);<br>setTimeout(() =&gt; {<br>    console.log(‘执行啦’)<br>},0);复制代码//代码2<br>console.log(‘先执行这里’);<br>setTimeout(() =&gt; {<br>    console.log(‘执行啦’)<br>},3000);<br>代码1的输出结果是：<br>//先执行这里<br>//执行啦<br>码2的输出结果是：<br>//先执行这里<br>// … 3s later<br>// 执行了<br>关于setTimeout要补充的是，即便主线程为空，0毫秒实际上也是达不到的。根据HTML的标准，最低是4毫秒。有兴趣的同学可以自行了解。</p>
+<h4 id="4-又恨又爱的setInterval"><a href="#4-又恨又爱的setInterval" class="headerlink" title="4.又恨又爱的setInterval"></a>4.又恨又爱的setInterval</h4><p>上面说完了setTimeout，当然不能错过它的孪生兄弟setInterval。他俩差不多，只不过后者是循环的执行。对于执行顺序来说，setInterval会每隔指定的时间将注册的函数置入Event Queue，如果前面的任务耗时太久，那么同样需要等待。<br>唯一需要注意的一点是，对于setInterval(fn,ms)来说，我们已经知道不是每过ms秒会执行一次fn，而是每过ms秒，会有fn进入Event Queue。一旦setInterval的回调函数fn执行时间超过了延迟时间ms，那么就完全看不出来有时间间隔了。这句话请读者仔细品味。</p>
+<h4 id="5-Promise与process-nextTick-callback"><a href="#5-Promise与process-nextTick-callback" class="headerlink" title="5.Promise与process.nextTick(callback)"></a>5.Promise与process.nextTick(callback)</h4><p>传统的定时器我们已经研究过了，接着我们探究Promise与process.nextTick(callback)的表现。<br>Promise的定义和功能本文不再赘述，不了解的读者可以学习一下阮一峰老师的Promise。而process.nextTick(callback)类似node.js版的”setTimeout”，在事件循环的下一次循环中调用 callback 回调函数。<br>我们进入正题，除了广义的同步任务和异步任务，我们对任务有更精细的定义：</p>
+<p>macro-task(宏任务)：包括整体代码script，setTimeout，setInterval<br>micro-task(微任务)：Promise，process.nextTick</p>
+<p>不同类型的任务会进入对应的Event Queue，比如setTimeout和setInterval会进入相同的Event Queue。<br>事件循环的顺序，决定js代码的执行顺序。进入整体代码(宏任务)后，开始第一次循环。接着执行所有的微任务。然后再次从宏任务开始，找到其中一个任务队列执行完毕，再执行所有的微任务。听起来有点绕，我们用文章最开始的一段代码说明：<br>setTimeout(function() {<br>    console.log(‘setTimeout’);<br>})</p>
+<p>new Promise(function(resolve) {<br>    console.log(‘promise’);<br>}).then(function() {<br>    console.log(‘then’);<br>})</p>
+<p>console.log(‘console’);</p>
+<p>这段代码作为宏任务，进入主线程。<br>先遇到setTimeout，那么将其回调函数注册后分发到宏任务Event Queue。(注册过程与上同，下文不再描述)<br>接下来遇到了Promise，new Promise立即执行，then函数分发到微任务Event Queue。<br>遇到console.log()，立即执行。<br>好啦，整体代码script作为第一个宏任务执行结束，看看有哪些微任务？我们发现了then在微任务Event Queue里面，执行。<br>ok，第一轮事件循环结束了，我们开始第二轮循环，当然要从宏任务Event Queue开始。我们发现了宏任务Event Queue中setTimeout对应的回调函数，立即执行。<br>结束。</p>
+<p>事件循环，宏任务，微任务的关系如图所示：<br><img src="3.png" alt=""></p>
+<p>我们来分析一段较复杂的代码，看看你是否真的掌握了js的执行机制：<br>console.log(‘1’);</p>
+<p>setTimeout(function() {<br>    console.log(‘2’);<br>    process.nextTick(function() {<br>        console.log(‘3’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘4’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘5’)<br>    })<br>})<br>process.nextTick(function() {<br>    console.log(‘6’);<br>})<br>new Promise(function(resolve) {<br>    console.log(‘7’);<br>    resolve();<br>}).then(function() {<br>    console.log(‘8’)<br>})</p>
+<p>setTimeout(function() {<br>    console.log(‘9’);<br>    process.nextTick(function() {<br>        console.log(‘10’);<br>    })<br>    new Promise(function(resolve) {<br>        console.log(‘11’);<br>        resolve();<br>    }).then(function() {<br>        console.log(‘12’)<br>    })<br>})<br>第一轮事件循环流程分析如下：</p>
+<p>·整体script作为第一个宏任务进入主线程，遇到console.log，输出1。<br>·遇到setTimeout，其回调函数被分发到宏任务Event Queue中。我们暂且记为setTimeout1。<br>·遇到process.nextTick()，其回调函数被分发到微任务Event Queue中。我们记为process1。<br>·遇到Promise，new Promise直接执行，输出7。then被分发到微任务Event Queue中。我们记为then1。<br>·又遇到了setTimeout，其回调函数被分发到宏任务Event Queue中，我们记为setTimeout2。<br>！<a href="4.png"></a><br>·上表是第一轮事件循环宏任务结束时各Event Queue的情况，此时已经输出了1和7。</p>
+<p>·我们发现了process1和then1两个微任务。</p>
+<p>·执行process1,输出6。<br>·执行then1，输出8。</p>
+<p>好了，第一轮事件循环正式结束，这一轮的结果是输出1，7，6，8。那么第二轮时间循环从setTimeout1宏任务开始：</p>
+<p>·首先输出2。接下来遇到了process.nextTick()，同样将其分发到微任务Event Queue中，记为process2。new Promise立即执行输出4，then也分发到微任务Event Queue中，记为then2。<br>！<a href="5.png"></a></p>
+<p>·第二轮事件循环宏任务结束，我们发现有process2和then2两个微任务可以执行。<br>·输出3。<br>·输出5。<br>·第二轮事件循环结束，第二轮输出2，4，3，5。<br>·第三轮事件循环开始，此时只剩setTimeout2了，执行。<br>·直接输出9。<br>·将process.nextTick()分发到微任务Event Queue中。记为process3。<br>· Promise，输出11。<br>将then分发到微任务Event Queue中，记为then3。</p>
+<p><img src="6.png" alt=""><br>·第三轮事件循环宏任务执行结束，执行两个微任务process3和then3。<br>·输出10。<br>·输出12。<br>·第三轮事件循环结束，第三轮输出9，11，10，12。</p>
+<p>整段代码，共进行了三次事件循环，完整的输出为1，7，6，8，2，4，3，5，9，11，10，12。(请注意，node环境下的事件监听依赖libuv与前端环境不完全相同，输出顺序可能会有误差)</p>
+<h4 id="6-写在最后"><a href="#6-写在最后" class="headerlink" title="6.写在最后"></a>6.写在最后</h4><p> (1)js的异步我们从最开头就说javascript是一门单线程语言，不管是什么新框架新语法糖实现的所谓异步，其实都是用同步的方法去模拟的，牢牢把握住单线程这点非常重要。<br> (2)事件循环Event Loop事件循环是js实现异步的一种方法，也是js的执行机制。<br>(3)javascript的执行和运行执行和运行有很大的区别，javascript在不同的环境下，比如node，浏览器，Ringo等等，执行方式是不同的。而运行大多指javascript解析引擎，是统一的。<br>(4)setImmediate微任务和宏任务还有很多种类，比如setImmediate等等，执行都是有共同点的，有兴趣的同学可以自行了解。<br>(5)最后的最后<br>javascript是一门单线程语言<br>Event Loop是javascript的执行机制</p>
+<p>牢牢把握两个基本点，以认真学习javascript为中心，早日实现成为前端高手的伟大梦想！</p>
+<p>原作者：ssssyoki<br>链接：<a href="https://juejin.im/post/59e85eebf265da430d571f89" target="_blank" rel="noopener">https://juejin.im/post/59e85eebf265da430d571f89</a></p>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/03/20/javascript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" data-id="ck4y8kz1v000wqgnrhm3z7s5s"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-正则表达式" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+    >正则表达式</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2019-03-20T02:39:54.000Z" itemprop="datePublished">2019-03-20</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>正则表达式，一个十分古老而又强大的文本处理工具，仅仅用一段非常简短的表达式语句，便能够快速实现一个非常复杂的业务逻辑。熟练地掌握正则表达式的话，能够使你的开发效率得到极大的提升。</p>
+<h2 id="正则表达式-js-java-c-python"><a href="#正则表达式-js-java-c-python" class="headerlink" title="正则表达式 js java c# python"></a>正则表达式 js java c# python</h2><h3 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h3><p><code>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp</code></p>
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>正则表达式是为了解决字符串操作中一些比较麻烦的场景，比如字符串提取、字符串替换、字符串验证等<ul>
+<li>常用于：表单验证：是否是一个数字、是一个电话号码、是一个邮箱。。。</li>
+<li>字符串替换：</li>
+<li>字符串查找</li>
+</ul>
+</li>
+</ul>
+<h4 id="正则表达式其实也是js里面的一个对象"><a href="#正则表达式其实也是js里面的一个对象" class="headerlink" title="正则表达式其实也是js里面的一个对象"></a>正则表达式其实也是js里面的一个对象</h4><h4 id="创建一个正则表达式"><a href="#创建一个正则表达式" class="headerlink" title="创建一个正则表达式"></a>创建一个正则表达式</h4><ul>
+<li><code>var reg2=new RegExp(&quot;a&quot;);</code></li>
+<li><code>var reg1=/a/;</code>   <ul>
+<li>其中//是标记，a表示要匹配的字符</li>
+</ul>
+</li>
+</ul>
+<h4 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/a/</span>;        <span class="comment">//匹配字符串中的a字符</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);        </span><br><span class="line"><span class="comment">//正则表达式的test用来检测字符串是否满足正则表达式的要求；</span></span><br><span class="line"><span class="comment">//由于"abc"中存在a，所以是符合要求的，所以这段代码的返回值为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isTrue = reg.test(<span class="string">"coke"</span>);   <span class="comment">//由于"coke"中不存在a字符，所以不符合条件   --&gt;isTrue:false</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/abc/</span>;     </span><br><span class="line">reg2.test(<span class="string">"adbcd"</span>); <span class="comment">//字符串中必然存在"abc"才符合要求，所以这段代码的返回值为false</span></span><br><span class="line"></span><br><span class="line">reg2.test(<span class="string">"1abc"</span>);  <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"abc123"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"abcabc"</span>);    <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="正则表达式特殊字符"><a href="#正则表达式特殊字符" class="headerlink" title="正则表达式特殊字符"></a>正则表达式特殊字符</h3><h4 id="字符类别"><a href="#字符类别" class="headerlink" title="字符类别"></a>字符类别</h4><ul>
+<li><p>. 表示除了换行符(\r \n)以外的任意字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/./</span>;</span><br><span class="line">reg.test(<span class="string">"a"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"."</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"\r"</span>); <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"1\r"</span>);    <span class="comment">//存在一个1，不是换行符，所以结果为：true</span></span><br><span class="line">reg.test(<span class="string">"\r\n"</span>);   <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注意点：如果以后要匹配.字符，不要直接写.</span></span><br><span class="line"><span class="comment">//为了匹配qq邮箱，写了 /qq.com/ 这是一个错误的写法：</span></span><br><span class="line"><span class="comment">//=&gt;/qq.com/不仅匹配："qq.com"也匹配"qq3com" "qq@com"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//解决方案：/qq\.com/  或者 /qq[.]com/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\d 表示数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d/</span>;</span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//由于存在一个数字，所以结果为true</span></span><br><span class="line">reg.test(<span class="string">"abcde"</span>);  <span class="comment">//由于不存在任何数字，所以结果为false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//扩展：</span></span><br><span class="line"><span class="keyword">var</span> _reg=<span class="regexp">/\d\d/</span>;</span><br><span class="line">_reg.test(<span class="string">"1b"</span>);    <span class="comment">//不存在2个连续数字，所以结果为：false</span></span><br><span class="line">_reg.test(<span class="string">"a12c"</span>);  <span class="comment">//存在2个连续数字，结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配手机号码：出现了连续11个数字</span></span><br><span class="line"><span class="keyword">var</span> isCellphoneNumber=<span class="regexp">/\d\d\d\d\d\d\d\d\d\d\d/</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例：匹配手机号码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d\d\d\d\d\d\d\d\d\d\d/</span>;</span><br><span class="line">reg.test(<span class="string">"13532159091"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"17380889395"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"a7380889395"</span>);        <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\D 是\d的取反结果，表示不是数字</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\D/</span>;</span><br><span class="line">_reg.test(<span class="string">"123"</span>);   <span class="comment">//由于全是数字，所以结果为：false</span></span><br><span class="line">_reg.test(<span class="string">"123a"</span>);  <span class="comment">//存在一个字母，所以结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/123\D5/</span>;</span><br><span class="line">_reg.test(<span class="string">"12345"</span>); <span class="comment">//false</span></span><br><span class="line">_reg.test(<span class="string">"123b5"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\w 匹配字母、数字、下划线 ，三者满足其一即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\w/</span>;   </span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//存在数字，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"a"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"_"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"-"</span>);  <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"."</span>);  <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">reg.test(<span class="string">"1."</span>);   <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"_\r\n"</span>);  <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"\r\n"</span>);   <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\W 是\w的取反</p>
+</li>
+<li><p>\s 表示一个空白字符（例如：\r \n \t 空格 。。。）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\s/</span>;</span><br><span class="line">reg.test(<span class="string">"abc def"</span>);   <span class="comment">//存在一个空白，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc\r123"</span>);   <span class="comment">//存在一个\r，结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);    <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\S 是\s的取反</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\S/</span>;</span><br><span class="line">reg.test(<span class="string">" \r \n "</span>);   <span class="comment">//全是空白字符，结果为false</span></span><br><span class="line">reg.test(<span class="string">"123 abc"</span>);    <span class="comment">//存在一个空白，结果为true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/\s\S/</span>;</span><br><span class="line">reg3.test(<span class="string">" a"</span>);    <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a "</span>);    <span class="comment">//false</span></span><br><span class="line">reg3.test(<span class="string">"a b"</span>);   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\ 转义字符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/./</span>;    <span class="comment">//匹配除了换行符以外的任意字符</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\./</span>;   <span class="comment">//匹配.字符</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\//</span>;   <span class="comment">//匹配一个正斜杠：/</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[/]/</span>;  <span class="comment">//。。。。。。。。。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例：匹配邮箱</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//asfas.com</span></span><br><span class="line"><span class="comment">//123ad.com</span></span><br><span class="line"><span class="comment">//ABC12.com</span></span><br><span class="line"><span class="comment">//abc_1.com</span></span><br><span class="line"><span class="keyword">var</span> reg =<span class="regexp">/\w\w\w\w\w\.com/</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h4 id="字符集合"><a href="#字符集合" class="headerlink" title="字符集合"></a>字符集合</h4><ul>
+<li>[]<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[1a2b3]/</span>; <span class="comment">//匹配一个字符，这个字符必须是：1/a/2/b/3其中一种，如果是就表示满足，如果不是就不满足</span></span><br><span class="line">reg.test(<span class="string">"a"</span>);      <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"3"</span>);      <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"fg5678"</span>); <span class="comment">//一个符合要求的字符都不存在，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"a999999"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//升级版</span></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/[123][abc]/</span>;  <span class="comment">//为了匹配连续2个字符，第一个字符必须在1/2/3之内，第二个字符必须在a/b/c之内</span></span><br><span class="line">reg2.test(<span class="string">"2a"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"3c"</span>);    <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"1basdfasf"</span>); <span class="comment">//true</span></span><br><span class="line">reg2.test(<span class="string">"asdfasdf1c"</span>);    <span class="comment">//存在符合条件的1c，结果为：true</span></span><br><span class="line">reg2.test(<span class="string">"39"</span>);    <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/[0-9]/</span>;   <span class="comment">//匹配数字0-9之间，任何一个数字 等价于：/\d/</span></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/[a-z]/</span>;   <span class="comment">//匹配小写字母</span></span><br><span class="line"><span class="keyword">var</span> reg4=<span class="regexp">/[A-Z]/</span>;   <span class="comment">//匹配大写字母</span></span><br><span class="line"><span class="keyword">var</span> reg5=<span class="regexp">/[a-zA-Z]/</span>;<span class="comment">//匹配所有字母</span></span><br><span class="line"><span class="keyword">var</span> reg6=<span class="regexp">/[A-Za-z]/</span>;<span class="comment">//..........</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg10=<span class="regexp">/[0-9abc]/</span>;</span><br><span class="line">reg10.test(<span class="string">"3"</span>);<span class="comment">//true</span></span><br><span class="line">reg10.test(<span class="string">"five"</span>);<span class="comment">//false</span></span><br><span class="line">reg10.test(<span class="string">"banana"</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li>[^]<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/[^123]/</span>;   <span class="comment">//匹配一个字符，但是这个字符既不是1 并且 不是2 并且 不是3 </span></span><br><span class="line">reg.test(<span class="string">"a"</span>);      <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"3"</span>);      <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//没有1，2，3以外的字符，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"a123"</span>);   <span class="comment">//存在一个符合条件的a，所以结果为：true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h4><ul>
+<li>^ 表示字符串最左边</li>
+<li>$ 表示字符串最右边<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/^abc/</span>;     <span class="comment">//表示以abc开头</span></span><br><span class="line">reg.test(<span class="string">"123abc123"</span>);  <span class="comment">//并不是以abc开头，结果为：false</span></span><br><span class="line">reg.test(<span class="string">"abc123"</span>);     <span class="comment">//以abc开头，结果为：true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc$/</span>;     <span class="comment">//表示以abc结尾</span></span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"abc123"</span>); <span class="comment">//结果为：false</span></span><br><span class="line">reg.test(<span class="string">"123bc"</span>);  <span class="comment">//结果为：false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配一个手机号码 (11位)--&gt;(1)+(10位数字)</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d\d\d\d\d\d\d\d\d\d/</span>;</span><br><span class="line">reg.test(<span class="string">"13166668888a"</span>);   <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg2=<span class="regexp">/^1\d\d\d\d\d\d\d\d\d\d$/</span>;</span><br><span class="line">reg2.test(<span class="string">"13166668888a"</span>);   <span class="comment">//false</span></span><br><span class="line">reg2.test(<span class="string">"13166668888"</span>);    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/^1[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/^abc$/</span>;    <span class="comment">//表示字符串abc</span></span><br><span class="line">reg.test(<span class="string">"abc"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line">reg.test(<span class="string">"123abc"</span>); <span class="comment">//结果为：false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><ul>
+<li><code>*</code> 出现0次或多次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d*/</span>;</span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"234"</span>);    <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/1\d*/</span>;</span><br><span class="line">reg3.test(<span class="string">"1"</span>); <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"123"</span>);   <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a123"</span>)   <span class="comment">//true</span></span><br><span class="line">reg3.test(<span class="string">"a123456b"</span>);   <span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
+<li><code>+</code> 出现1次或多次(至少一次)<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d+/</span>;</span><br><span class="line">reg.test(<span class="string">"1"</span>);      <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"123"</span>);    <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>?</code> 出现0次或一次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\d?/</span>; </span><br><span class="line">reg.test(<span class="string">"12"</span>);     <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1"</span>);      <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3}</code> 出现3次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/1\w&#123;5&#125;/</span>;</span><br><span class="line">reg.test(<span class="string">"1abc"</span>);   <span class="comment">//false</span></span><br><span class="line">reg.test(<span class="string">"112345"</span>); <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"1abc12"</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3,}</code> 至少出现3次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d&#123;2,&#125;/</span>;</span><br><span class="line">reg.test(<span class="string">"12"</span>); <span class="comment">//true</span></span><br><span class="line">reg.test(<span class="string">"5"</span>);  <span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
+<li><code>{3,5}</code> 出现3-5次<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc&#123;3&#125;/</span>;           <span class="comment">//表示匹配abccc</span></span><br><span class="line">reg.test(<span class="string">"123abccc123"</span>);    <span class="comment">//结果为：true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg3=<span class="regexp">/(abc)&#123;2&#125;/</span>;    <span class="comment">//匹配abcabc</span></span><br></pre></td></tr></table></figure></li>
+<li><code>|</code> 或者<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/abc|123/</span>;  <span class="comment">//表示匹配abc或者123</span></span><br><span class="line"></span><br><span class="line">reg.test(<span class="string">"abc456"</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg5=<span class="regexp">/^abc|123$/</span>;  <span class="comment">//匹配以abc开头，或者以123结尾</span></span><br><span class="line">reg5.test(<span class="string">"abcafsadfasd"</span>);<span class="comment">//true</span></span><br><span class="line">reg5.test(<span class="string">"afsdfasdf123"</span>);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg6=<span class="regexp">/^(abc|123)$/</span>;        <span class="comment">//匹配abc/123</span></span><br></pre></td></tr></table></figure></li>
+<li><code>()</code> 分组<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//010-88889999</span></span><br><span class="line"><span class="comment">//0576-12312312</span></span><br><span class="line"><span class="comment">//0895-1234567</span></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>;  <span class="comment">//匹配电话号码</span></span><br><span class="line"><span class="keyword">var</span> arr=<span class="string">"021-33335555"</span>.match(<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>)</span><br><span class="line">arr[<span class="number">0</span>]  <span class="comment">//全部</span></span><br><span class="line">arr[<span class="number">1</span>]  <span class="comment">//第一组：区号：021</span></span><br><span class="line">arr[<span class="number">2</span>]  <span class="comment">//第二组：号码：333355555</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>;</span><br><span class="line"><span class="string">"021-33335555"</span>.replace(<span class="regexp">/(\d&#123;3,4&#125;)-(\d&#123;7,8&#125;)/</span>,<span class="string">'区号是：$1'</span>)</span><br><span class="line"><span class="comment">//区号是：021</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">"[object Array]"</span>;</span><br><span class="line"><span class="keyword">var</span> str2=<span class="string">"[object Object]"</span>;</span><br><span class="line"><span class="keyword">var</span> str3=<span class="string">'[object Function]'</span>;</span><br><span class="line"><span class="keyword">var</span> str4=<span class="string">'[object Date]'</span>;</span><br><span class="line"></span><br><span class="line">str.replace(<span class="string">"[object "</span>,<span class="string">""</span>).replace(<span class="string">"]"</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line">str.replace(<span class="regexp">/\[object /</span>,<span class="string">""</span>).replace(<span class="regexp">/\]/</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line"><span class="comment">//这样的话正则表达式只匹配一次，也就是说后面的]换不掉</span></span><br><span class="line">str.replace(<span class="regexp">/\[object |\]/</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"><span class="comment">//如何解决？进行全局匹配</span></span><br><span class="line">str.replace(<span class="regexp">/\[object |\]/g</span>,<span class="string">""</span>).toLowerCase();</span><br><span class="line"></span><br><span class="line">str.replace(<span class="regexp">/[^\s]+\s/</span>,<span class="string">""</span>).replace(<span class="regexp">/\]/</span>,<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>正则表达式经常被用于字段或任意字符串的校验，如下面这段校验基本日期格式的JavaScript代码：</p>
+<p><code>var reg = /^(\\d{1,4})(-|\\/)(\\d{1,2})\\2(\\d{1,2})$/; 
+var r = fieldValue.match(reg);             
+if(r==null)alert(&#39;Date format error!&#39;);</code></p>
+<h5 id="1-校验密码强度"><a href="#1-校验密码强度" class="headerlink" title="1 . 校验密码强度"></a>1 . 校验密码强度</h5><p>密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</p>
+<p><code>／^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$／</code></p>
+<h5 id="2-校验中文"><a href="#2-校验中文" class="headerlink" title="2. 校验中文"></a>2. 校验中文</h5><p><code>／^[\\u4e00-\\u9fa5]{0,}$／</code></p>
+<h5 id="3-由数字、26个英文字母或下划线组成的字符串"><a href="#3-由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="3. 由数字、26个英文字母或下划线组成的字符串"></a>3. 由数字、26个英文字母或下划线组成的字符串</h5><p><code>/^\\w+$/</code></p>
+<h5 id="4-校验E-Mail-地址"><a href="#4-校验E-Mail-地址" class="headerlink" title="4. 校验E-Mail 地址"></a>4. 校验E-Mail 地址</h5><p>同密码一样，下面是E-mail地址合规性的正则检查语句。<br><code>/[\\w!#$%&amp;&#39;*+/=?^_</code>{|}<del>-]+(?:\.[\w!#$%&amp;’*+/=?^_`{|}</del>-]+)<em>@(?:[\w](?:[\w-]</em>[\w])?\.)+<a href="?:[\w-]*[\w]">\w</a>?/`</p>
+<h5 id="5-校验身份证号码"><a href="#5-校验身份证号码" class="headerlink" title="5. 校验身份证号码"></a>5. 校验身份证号码</h5><p>下面是身份证号码的正则校验。15 或 18位。<br>15位：<br><code>/^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$/</code><br>18位：<br><code>/^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$/</code></p>
+<h5 id="6-校验日期"><a href="#6-校验日期" class="headerlink" title="6. 校验日期"></a>6. 校验日期</h5><p><code>/^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/</code></p>
+<h5 id="7-校验金额"><a href="#7-校验金额" class="headerlink" title="7. 校验金额"></a>7. 校验金额</h5><p>金额校验，精确到2位小数。<br><code>^[0-9]+(.[0-9]{2})?$</code></p>
+<h5 id="8-校验手机号"><a href="#8-校验手机号" class="headerlink" title="8. 校验手机号"></a>8. 校验手机号</h5><p>下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）<br><code>/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$/</code></p>
+<h5 id="9-判断IE的版本"><a href="#9-判断IE的版本" class="headerlink" title="9. 判断IE的版本"></a>9. 判断IE的版本</h5><p>IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。<br><code>/^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$/</code></p>
+<h5 id="10-校验IP-v4地址"><a href="#10-校验IP-v4地址" class="headerlink" title="10. 校验IP-v4地址"></a>10. 校验IP-v4地址</h5><p>IP4 正则语句。<br><code>/\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b/</code></p>
+<h5 id="11-校验IP-v6地址"><a href="#11-校验IP-v6地址" class="headerlink" title="11. 校验IP-v6地址"></a>11. 校验IP-v6地址</h5><p>IP6 正则语句。<br><code>/(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))/</code></p>
+<h5 id="12-检查URL的前缀"><a href="#12-检查URL的前缀" class="headerlink" title="12. 检查URL的前缀"></a>12. 检查URL的前缀</h5><p>应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。<br><code>/if (!s.match(/^[a-zA-Z]+:\\/\\//))
+{
+    s = &#39;http://&#39; + s;
+}/</code></p>
+<h5 id="13-提取URL链接"><a href="#13-提取URL链接" class="headerlink" title="13. 提取URL链接"></a>13. 提取URL链接</h5><p>下面的这个表达式可以筛选出一段文本中的URL。<br><code>/^(f|ht){1}(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?/</code></p>
+<h5 id="14-文件路径及扩展名校验"><a href="#14-文件路径及扩展名校验" class="headerlink" title="14. 文件路径及扩展名校验"></a>14. 文件路径及扩展名校验</h5><p>验证windows下文件路径和扩展名（下面的例子中为.txt文件）<br><code>/^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?&quot;&lt;&gt;|]+\\.txt(l)?$/</code></p>
+<h5 id="15-提取Color-Hex-Codes"><a href="#15-提取Color-Hex-Codes" class="headerlink" title="15. 提取Color Hex  Codes"></a>15. 提取Color Hex  Codes</h5><p>有时需要抽取网页中的颜色代码，可以使用下面的表达式。<br><code>/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/</code><br>#####33 16. 提取网页图片<br>假若你想提取网页中所有图片信息，可以利用下面的表达式。<br><code>/\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\&quot;\\&#39;]{0,1}([^\\&quot;\\&#39;\\ &gt;]*)/</code></p>
+<h5 id="17-提取页面超链接"><a href="#17-提取页面超链接" class="headerlink" title="17. 提取页面超链接"></a>17. 提取页面超链接</h5><p>提取html中的超链接。<br><code>/(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&#39;.implode(&#39;|(?:www\\.)?&#39;, $follow_list).&#39;))[^&quot;]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;/</code></p>
+<h5 id="18-查找CSS属性"><a href="#18-查找CSS属性" class="headerlink" title="18. 查找CSS属性"></a>18. 查找CSS属性</h5><p>通过下面的表达式，可以搜索到相匹配的CSS属性。<br><code>/^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}/</code></p>
+<h5 id="19-抽取注释"><a href="#19-抽取注释" class="headerlink" title="19. 抽取注释"></a>19. 抽取注释</h5><p>如果你需要移除HMTL中的注释，可以使用如下的表达式。<br><code>&lt;!--(.*?)--&gt;</code><br>#####20. 匹配HTML标签<br>通过下面的表达式可以匹配出HTML中的标签属性。<br><code>&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:&quot;.*?&quot;|&#39;.*?&#39;|[\\^&#39;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</code></p>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2019/03/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ck4y8kz1x000yqgnr98oa262c"
+        class="article-share-link">分享</a>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE/" rel="tag">正则表达</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-html知识总结" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"
+    >HTML知识总结</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2018-12-24T16:00:00.000Z" itemprop="datePublished">2018-12-25</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h4 id="1-Doctype作用，HTML5-为什么只需要写"><a href="#1-Doctype作用，HTML5-为什么只需要写" class="headerlink" title="1. Doctype作用，HTML5 为什么只需要写 "></a>1. Doctype作用，HTML5 为什么只需要写 <!DOCTYPE HTML></h4><p>doctype是一种标准通用标记语言的文档类型声明，目的是告诉标准通用标记语言解析器要使用什么样的文档类型定义（DTD）来解析文档.<br>HTML5不基于SGML（Standard Generalized Markup Language），所以不需要引用DTD。</p>
+<h4 id="2-行内元素有哪些，块级元素有哪些，空-void-元素有那些？"><a href="#2-行内元素有哪些，块级元素有哪些，空-void-元素有那些？" class="headerlink" title="2. 行内元素有哪些，块级元素有哪些，空(void)元素有那些？"></a>2. 行内元素有哪些，块级元素有哪些，空(void)元素有那些？</h4><p>行内元素：a span i img input select b 等<br>块级元素：div ul ol li h1~h6 p table等<br>空元素：br hr link 等。</p>
+<h4 id="3-简述一下你对HTML语义化的理解"><a href="#3-简述一下你对HTML语义化的理解" class="headerlink" title="3. 简述一下你对HTML语义化的理解"></a>3. 简述一下你对HTML语义化的理解</h4><p>简单来说，就是合适的标签做合适的事情，这样的具有以下好处：<br>～有助于架构良好的HTML结构，有利于搜索引擎的索引，抓取，利于SEO（搜索引擎优化）<br>～有利于不同设备的解析<br>～有利于构建清晰的机构，有利于团队的开发，维护。</p>
+<h4 id="4-常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解"><a href="#4-常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解" class="headerlink" title="4. 常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解"></a>4. 常见的浏览器内核有哪些，介绍一下你对浏览器内核的理解</h4><p>Trident内核：IE<br>Gecko内核： NETSCAPE6及以上版本，火狐<br>Presto内核：Opera7及以上。[Opera内核原为：Presto，现为：Blink;]Webkit内核：Safari，Chrome等。[Chrome的：Blink（WebKit的分支）]<br>浏览器内核又可以分成两部分：渲染引擎和JS引擎。 渲染引擎主要负责取得网页的内容、整理讯息、计算网页的显示方式等，JS引擎则是解析Javascript语言，执行javascript语言来实现网页的动态效果。</p>
+<h4 id="5-html5有哪些新特性"><a href="#5-html5有哪些新特性" class="headerlink" title="5. html5有哪些新特性"></a>5. html5有哪些新特性</h4><p>  • 语义化标签: header footer nav section article aside 等<br>  • 增强型表单：date(从一个日期选择器选择一个日期) email(包含 e-mail 地址的输入域) number(数值的输入域) range(一定范围内数字值的输入域) search(用于搜索域) tel(定义输入电话号码字段) 等<br>  • 视频和音频：audio video<br>  • Canvas绘图 SVG绘图<br>  • 地理定位：Geolocation<br>  • 拖放API：drag<br>  • web worker：是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能<br>  • web storage: localStorage sessionStorage<br>  • WebSocket: HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议</p>
+<h4 id="6-描述一下-cookie，sessionStorage-和-localStorage-的区别"><a href="#6-描述一下-cookie，sessionStorage-和-localStorage-的区别" class="headerlink" title="6. 描述一下 cookie，sessionStorage 和 localStorage 的区别"></a>6. 描述一下 cookie，sessionStorage 和 localStorage 的区别</h4><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g1irbs4f4oj30vk0dydk3.jpg" alt=""></p>
+<h4 id="7-如何实现浏览器内多个标签页之间的通信"><a href="#7-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="7. 如何实现浏览器内多个标签页之间的通信"></a>7. 如何实现浏览器内多个标签页之间的通信</h4><p>  • 使用localStorage: localStorage.setItem(key,value)、localStorage.getItem(key)<br>  • websocket协议<br>  • webworker(为javascript创造多线程环境)</p>
+<h4 id="8-HTML5的离线存储怎么使用，解释一下工作原理"><a href="#8-HTML5的离线存储怎么使用，解释一下工作原理" class="headerlink" title="8. HTML5的离线存储怎么使用，解释一下工作原理"></a>8. HTML5的离线存储怎么使用，解释一下工作原理</h4><p>使用HTML5，通过创建cache manifest文件，可以轻松创建WEB应用的离线版本。HTML5引入了应用程序缓存，这意味着应用可进行缓存，并可在没有网络进行访问。应用程序缓存为应用带来三个优势：<br>  • 离线浏览–用户可在离线时使用它们。 <br>  • 速度–已经缓存的资源加载得更快。 <br>  • 减少服务器负载–浏览器将只从服务器下载更改过的资源。 <br>HTML5的离线存储是基于一个新建的manifest（即.appcache）文件的。<br>manifest 文件可分为三个部分：<br>  • CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存 <br>  • NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存 <br>  • FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面） 在线的情况下,用户代理每次访问页面，都会去读一次manifest.如果发现其改变, 则重新加载全部清单中的资源。 </p>
+<h4 id="9-src与href的区别"><a href="#9-src与href的区别" class="headerlink" title="9. src与href的区别"></a>9. src与href的区别</h4><p>区别：src用于替代这个元素，而href用于建立这个标签与外部资源之间的关系</p>
+<link href="style.css" rel="stylesheet" />浏览器加载到这里的时候，html的渲染和解析不会暂停，css文件的加载是同时进行的
+<script src="script.js"></script>当浏览器解析到这句代码时，页面的加载和解析都会暂停直到浏览器拿到并执行完这个js文件
+请求资源类型不同
+（1） href是Hypertext Reference的缩写，表示超文本引用。用来建立当前元素和文档之间的链接。常用的有：link、a。
+（2）在请求 src 资源时会将其指向的资源下载并应用到文档中，常用的有script，img 、iframe；
+作用结果不同
+（1）href 用于在当前文档和引用资源之间确立联系；
+（2）src 用于替换当前内容；
+浏览器解析方式不同
+（1）若在文档中添加href ，浏览器会识别该文档为 CSS 文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式加载 CSS，而不是使用 @import 方式。
+（2）当浏览器解析到src ，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等也如此，类似于将所指向资源应用到当前内容。这也是为什么建议把 js 脚本放在底部而不是头部的原因。
+link和@import的区别
+两者都是外部引用 CSS 的方式，但是存在一定的区别：
+（1）link是XHTML标签，除了能够加载CSS，还可以定义RSS等其他事务；而@import属于CSS范畴，只可以加载CSS。
+（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。
+（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。
+（4）link支持使用Javascript控制DOM改变样式；而@import不支持。
+
+<h4 id="10-表单提交中Get和Post方式的区别"><a href="#10-表单提交中Get和Post方式的区别" class="headerlink" title="10. 表单提交中Get和Post方式的区别"></a>10. 表单提交中Get和Post方式的区别</h4><p>  • Get一般用于从服务器上获取数据，Post向服务器传送数据<br>  • Get传输的数据是拼接在Url之后的，对用户是可见的；Post的传输数据对用户是不可见的<br>  • Get传送的数据量较小，不能大于2KB。Post传送的数据量较大，一般被默认为不受限制<br>  • Get安全性非常低，Post安全性较高<br>  • 在FORM提交的时候，如果不指定Method，则默认为Get请求</p>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2018/12/25/html%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" data-id="ck4y8kz15000cqgnrh0etd1k9"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-CSS知识总结" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"
+    >CSS知识总结</a
+  >
+</h2>
+  
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2018-09-17T08:00:13.000Z" itemprop="datePublished">2018-09-17</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <h5 id="1-css盒子模型，box-sizing属性的理解"><a href="#1-css盒子模型，box-sizing属性的理解" class="headerlink" title="1. css盒子模型，box-sizing属性的理解"></a>1. css盒子模型，box-sizing属性的理解</h5><p>css的盒模型由content(内容)、padding(内边距)、border(边框)、margin(外边距)组成。但盒子的大小由content+padding+border这几部分决定<br>box-sizing是一个CSS3属性，与盒子模型有着密切联系。即决定元素的宽高如何计算，box-sizing有三个属性：<br>box-sizing: content-box|border-box|inherit:<br>    •    content-box 使得元素的宽高即为内容区的宽高(默认模式)<br>    •    border-box: 计算方式content + padding + border = 本身元素大小，即缩小了content大小<br>    •    inherit 指定box-sizing属性的值，应该从父元素继承</p>
+<h5 id="2-清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法"><a href="#2-清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法" class="headerlink" title="2. 清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法"></a>2. 清除浮动，什么时候需要清除浮动，清除浮动都有哪些方法</h5><p>浮动的元素是脱离文档标准流的，如果我们不清楚浮动，那么就会造成父元素高度塌陷，影响页面布局。<br>清除浮动的方式：<br>    •    为父元素设置高度<br>    •    为父元素添加overflow:hidden<br>    •    伪元素<br><code>.fix::after { 
+     content:&quot;&quot;; 
+     display:block; 
+     clear:both;
+}</code><br>使用伪元素的好处：不增加冗余的DOM节点，符合语义化<br>overflow:hidden可以触发BFC机制。BFC：块级格式化上下文，创建了 BFC的元素就是一个独立的盒子，它规定了内部如何布局，并且与这个独立盒子里的布局不受外部影响，当然它也不会影响到外面的元素，计算BFC的高度时，浮动元素也参与计算</p>
+<h5 id="3-如何让一个不定宽高的盒子水平垂直居中"><a href="#3-如何让一个不定宽高的盒子水平垂直居中" class="headerlink" title="3. 如何让一个不定宽高的盒子水平垂直居中"></a>3. 如何让一个不定宽高的盒子水平垂直居中</h5><p>定位的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.father &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.son &#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>css3属性<br><code>.father {
+    position: relative;
+}
+.son {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}</code><br>flex布局<br><code>.father {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></p>
+<h5 id="4-px和em和rem的区别"><a href="#4-px和em和rem的区别" class="headerlink" title="4. px和em和rem的区别"></a>4. px和em和rem的区别</h5><p>px: 像素，相对长度单位。像素px是相对于显示器屏幕分辨率而言的<br>em的值并不是固定的，会继承父级元素的字体大小，代表倍数<br>rem的值并不是固定的，始终是基于根元素 <html> 的，也代表倍数</p>
+<h5 id="5-position的值有哪些"><a href="#5-position的值有哪些" class="headerlink" title="5. position的值有哪些"></a>5. position的值有哪些</h5><p>static： 默认值。没有定位，元素出现在正常的流中<br>relative（相对定位）：生成相对定位的元素,相对于其正常（原先本身）位置进行定位<br>absolute（绝对定位）：生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位<br>fixed（固定定位）：生成绝对定位的元素，相对于浏览器窗口进行定位</p>
+<h5 id="6-display-none与visibility：hidden的区别"><a href="#6-display-none与visibility：hidden的区别" class="headerlink" title="6. display:none与visibility：hidden的区别"></a>6. display:none与visibility：hidden的区别</h5><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1g1irt7heznj30vk0cydjs.jpg" alt=""></p>
+<h5 id="7-CSS中link-和-import的区别"><a href="#7-CSS中link-和-import的区别" class="headerlink" title="7. CSS中link 和@import的区别"></a>7. CSS中link 和@import的区别</h5><p>link属于XHTML标签，@import完全是CSS提供的一种方式,只能加载CSS<br>加载顺序的差别，当一个页面被加载的时候，link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载<br>兼容性的差别。由于@import是CSS2.1提出的所以老的浏览器不支持，而link标签无此问题<br>当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的</p>
+<h5 id="8-什么是响应式设计，响应式设计的基本原理是什么"><a href="#8-什么是响应式设计，响应式设计的基本原理是什么" class="headerlink" title="8. 什么是响应式设计，响应式设计的基本原理是什么"></a>8. 什么是响应式设计，响应式设计的基本原理是什么</h5><p>响应式网站设计是一个网站能够兼容多个终端，而不是为每一个终端做一个特定的版本。基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理</p>
+<h5 id="9-为什么要初始化CSS样式"><a href="#9-为什么要初始化CSS样式" class="headerlink" title="9. 为什么要初始化CSS样式"></a>9. 为什么要初始化CSS样式</h5><p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对 CSS 初始化往往会出现浏览器之间的页面显示差异<br>初始化样式会对 SEO 有一定的影响</p>
+<h5 id="10-CSS3有哪些新特性"><a href="#10-CSS3有哪些新特性" class="headerlink" title="10. CSS3有哪些新特性"></a>10. CSS3有哪些新特性</h5><p>•实现圆角border-radius，阴影box-shadow，边框图片border-image<br>•对文字加特效text-shadow，强制文本换行word-wrap，线性渐变linear-gradient<br>•实现旋转transform:rotate(90deg),缩放scale(0.85,0.90),translate(0px,-30px)定位,倾斜skew(-9deg,0deg);<br>•增加了更多的CSS选择器、多背景、rgba()<br>•唯一引入的伪元素是::selection；<br>•实现媒体查询@media，多栏布局flex<br>•过渡transition 动画animation</p>
+<h5 id="11-before-和-after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用"><a href="#11-before-和-after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用" class="headerlink" title="11. ::before 和 :after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用"></a>11. ::before 和 :after中双冒号和单冒号有什么区别？解释一下这2个伪元素的作用</h5><p>单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。（伪元素由双冒号和伪元素名称组成）,双冒号是在当前规范中引入的，用于区分伪类和伪元素</p>
+<h5 id="12-CSS优化、提高性能的方法有哪些"><a href="#12-CSS优化、提高性能的方法有哪些" class="headerlink" title="12. CSS优化、提高性能的方法有哪些"></a>12. CSS优化、提高性能的方法有哪些</h5><p>·移除空的css规则（Remove empty rules）<br>·正确使用display的属性<br>·不滥用浮动、web字体<br>·不声明过多的font-size<br>·遵守盒模型规则<br>·尽量减少页面重排、重绘<br>·抽象提取公共样式，减少代码量</p>
+<h5 id="13-重绘和回流"><a href="#13-重绘和回流" class="headerlink" title="13. 重绘和回流"></a>13. 重绘和回流</h5><p>重绘和回流</p>
+<h5 id="14-flex布局"><a href="#14-flex布局" class="headerlink" title="14. flex布局"></a>14. flex布局</h5><p>可以参考一下阮大大的文章 <a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">flex布局教程–阮一峰 </a></p>
+<h5 id="15-css预处理器"><a href="#15-css预处理器" class="headerlink" title="15. css预处理器"></a>15. css预处理器</h5><p>提供了一种css的书写方式，常见的就是 <a href="http://sass.bootcss.com/docs/sass-reference/" target="_blank" rel="noopener">SAAS文档</a> 和 <a href="https://less.bootcss.com/" target="_blank" rel="noopener">LESS文档</a></p>
+<hr>
+
+      
+      <!-- 打赏 -->
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="zhuxinzeng.club/2018/09/17/CSS%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" data-id="ck4y8kz0u0003qgnrbrvd1x67"
+        class="article-share-link">分享</a>
+      
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
+  
+</section>
 </div>
 
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Brace | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2015-2020
+        Brace
+      </li>
+      <li>
+        
+          Powered by
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
 </footer>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+      </div>
+    </main>
+    
+      <aside class="sidebar">
+        
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/avator.jpg" alt="Brace"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/null">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+      </aside>
+      <div id="mask"></div>
 
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
     </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+
+<script src="/js/ayer.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
+  </div>
 </body>
+
 </html>
